@@ -1,0 +1,182 @@
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body 
+        {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 
+        {
+            text-align: center;
+        }
+
+        .form-row 
+        {
+            margin-bottom: 2px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group 
+        {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1; 
+        }
+
+        label 
+        {
+            margin-bottom: 3px;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea 
+        {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            box-sizing: border-box; 
+            font-size: 14px;
+        }
+
+        .file-input 
+        {
+            border: 1px solid #555;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .inline-group 
+        {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .inline-group input[type="radio"],
+        .inline-group input[type="checkbox"] 
+        {
+            margin: 0; 
+        }
+
+        .submit-btn 
+        {
+            width: 100%;
+            background-color: red;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        #address 
+        {
+            height: 100px;
+        }
+
+        #b1
+        {
+            border-color: red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Student Registration Form</h1>
+    <form>
+        <div class="form-group full-width">
+            <label for="sname">Student Name</label>
+            <input type="text" id="sname" name="sname">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="mno">Mobile No.</label>
+                <input type="tel" id="mno" name="mno">
+            </div>
+            <div class="form-group">
+                <label for="eid">Email Id</label>
+                <input type="email" id="eid" name="eid">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fname">Father Name</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="form-group">
+                <label for="mname">Mother Name</label>
+                <input type="text" id="mname" name="mname">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course">
+                    <option value="">Select...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date Of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="inline-group">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="spic">Student Photo</label>
+                <input type="file" id="spic" name="spic" class="file-input">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Select Branch</label>
+            <div class="inline-group">
+                <input type="checkbox" id="cse" name="branch" value="CSE">
+                <label for="cse">CSE</label>
+                
+                <input type="checkbox" id="it" name="branch" value="IT">
+                <label for="it">IT</label>
+                
+                <input type="checkbox" id="ece" name="branch" value="ECE">
+                <label for="ece">ECE</label>
+                
+                <input type="checkbox" id="civil" name="branch" value="CIVIL">
+                <label for="civil">Civil</label>
+            </div>
+        </div>
+
+        <div class="form-group" >
+            <label for="address">Address</label>
+            <textarea id="address" name="address" width=20px></textarea>
+        </div>
+
+        <button id="b1" type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+</body>
+</html>
