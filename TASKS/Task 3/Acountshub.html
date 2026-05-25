@@ -3,127 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Accounts Hub - Educational Center</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-    <div class="topline"></div>
-
-    <ul class="navbar">
-
-        <li><a href="#">HOME</a></li>
-
-        <li class="dropdown">
-            <a href="#">ABOUT</a>
-
-            <div class="dropdown-content">
-                <a href="#">Our Story</a>
-                <a href="#">Mission</a>
-                <a href="#">Team</a>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Accounts Hub Logo">
             </div>
-        </li>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">ABOUT <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">COURSES <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">MEDIA <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">BLOGS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <li class="dropdown">
-            <a href="#">COURSES</a>
-
-            <div class="dropdown-content">
-                <a href="#">Accounting</a>
-                <a href="#">Finance</a>
-                <a href="#">Business Analytics</a>
-            </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="#">MEDIA</a>
-
-            <div class="dropdown-content">
-                <a href="#">Gallery</a>
-                <a href="#">Videos</a>
-                <a href="#">News</a>
-            </div>
-        </li>
-
-        <li><a href="#">BLOGS</a></li>
-
-        <li><a href="#">CONTACT US</a></li>
-
-    </ul>
-
-    <div class="banner">
-
-        <img class="logo" src="logo.png" alt="Accounts Hub logo">
-
-        <img class="bannerimage" src="banner.png" alt="Students learning together">
-
-        <div class="bannertext">
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
             <h1>IGNITE YOUR PASSION FOR LEARNING</h1>
         </div>
-
-    </div>
-
-    <div class="course-section">
-
-        <h1><span>OUR</span> COURSES</h1>
-
-        <div class="course-card">
-            <img src="3.png" alt="Course 1">
-
-            <h2>QuickBooks</h2>
-
-            <p>
-                QuickBooks is an accounting software that helps
-                small and medium-sized businesses manage their
-                financial transactions.
-            </p>
-
-            <button>Read More</button>
+        <div class="slider-arrow left"><i class="fas fa-chevron-left"></i></div>
+        <div class="slider-arrow right"><i class="fas fa-chevron-right"></i></div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
+    </section>
 
-        <div class="course-card">
-            <img src="4.png" alt="Course 2">
-
-            <h2>SAP Financial Accounting</h2>
-
-            <p>
-                SAP Financial Accounting (FI) is a module in
-                SAP Enterprise Resource Planning (ERP).
-            </p>
-
-            <button>Read More</button>
+    <section class="courses section-padding container">
+        <div class="section-title">
+            <h2>OUR <span>COURSES</span></h2>
         </div>
-
-        <div class="course-card">
-            <img src="2.png" alt="Course 3">
-
-            <h2>SAP Material Management</h2>
-
-            <p>
-                SAP Material Management (MM) is a module in
-                SAP Enterprise Resource Planning (ERP).
-            </p>
-
-            <button>Read More</button>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="course-icon"><img src="3.png" alt="QuickBooks"></div>
+                <h3>QuickBooks</h3>
+                <p>QuickBooks is an accounting software that helps small and medium-sized businesses manage their financial transactions...</p>
+                <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><img src="4.png" alt="SAP FICO"></div>
+                <h3>SAP Financial Accounting</h3>
+                <p>SAP Financial Accounting (FI) is a module in the SAP Enterprise Resource Planning (ERP)...</p>
+                <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><img src="2.png" alt="SAP MM"></div>
+                <h3>SAP Material Management</h3>
+                <p>SAP Material Management (MM) is a module in the SAP Enterprise Resource Planning (ERP)...</p>
+                <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><img src="1.png" alt="Tally"></div>
+                <h3>Tally</h3>
+                <p>Tally is a business management software that provides accounting, inventory management, and summary...</p>
+                <a href="#" class="btn btn-dark">Read More</a>
+            </div>
         </div>
-
-        <div class="course-card">
-            <img src="1.png" alt="Course 4">
-
-            <h2>Tally</h2>
-
-            <p>
-                Tally is a business management software that
-                provides accounting and inventory management.
-            </p>
-
-            <button>Read More</button>
+        <div class="text-center mt-3">
+            <a href="#" class="btn btn-orange">View All</a>
         </div>
+    </section>
 
-        <div class="viewall">
-            <button>View All</button>
+    <section class="diploma-form-section bg-light section-padding">
+        <div class="container flex-row">
+            <div class="diploma-banner">
+                <img src="choose-img.jpg" alt="Diploma Courses">
+                <div class="diploma-content">
+                    <h3>DIPLOMA</h3>
+                    <p>COURSES AFTER 12TH</p>
+                </div>
+            </div>
+            <div class="course-form">
+                <h2>CHOOSE <span>YOUR COURSE</span></h2>
+                <form action="#">
+                    <div class="form-group"><input type="text" placeholder="Enter Name"></div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                    </div>
+                    <div class="form-row">
+                        <select>
+                            <option value="">Choose Course</option>
+                            <option value="tally">Tally</option>
+                            <option value="sap">SAP</option>
+                        </select>
+                        <input type="date" placeholder="Date Of Birth">
+                    </div>
+                    <button type="submit" class="btn btn-orange full-width">Submit Request</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="about-uniqueness section-padding container">
+        <div class="flex-row">
+            <div class="about-content half-width">
+                <div class="section-title"><h2>ABOUT <span>ACCOUNTS HUB</span></h2></div>
+                <p>Accounts Hub is one of the leading institutions in Kerala which provides training in many job oriented IT courses. It is founded by highly experienced teachers in the field of finance, Accounting and Taxation. Our staff has the experience of more than 20 years in the industry...</p>
+                <a href="#" class="btn btn-orange">Read More</a>
+            </div>
+            <div class="uniqueness-content half-width">
+                <div class="section-title"><h2>OUR <span>UNIQUENESS</span></h2></div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-plus"></i> Affordable Course Fee</li>
+                    <li><i class="fas fa-plus"></i> Comprehensive Job-Oriented Training Programs</li>
+                    <li><i class="fas fa-plus"></i> Wide Range of Diploma Courses with Professional Focus</li>
+                    <li><i class="fas fa-plus"></i> Commitment to Career Development through Placement Assistance</li>
+                    <li><i class="fas fa-plus"></i> Inclusive Eligibility Criteria for Graduates from Various Streams</li>
+                    <li><i class="fas fa-plus"></i> Training Tailored to Corporate and Professional Needs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-floating">
+            <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section class="testimonials bg-light section-padding">
+        <div class="container">
+            <div class="section-title text-center"><h2>OUR <span>STUDENT'S SAY</span></h2></div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"If you're looking for quality training in IT or distance education options, Accounts Hub is the place to be! The hands-on approach, experienced trainers, and student-friendly environment make learning smooth and effective."</p>
+                    <h4>Joel Varghese</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Accounts Hub is truly a game-changer for anyone looking to build a strong career in IT and finance. With their expert-led training in job-oriented IT courses, I gained hands-on skills that boosted my confidence and employability."</p>
+                    <h4>Akhila V K</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blogs section-padding container">
+        <div class="section-title">
+            <h2>OUR <span>BLOGS</span></h2>
+            <p>See Our Recent Blogs</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="blog-1.jpg" alt="Blog Image">
+                    <div class="date-badge">10<br>Mar</div>
+                </div>
+                <div class="blog-info">
+                    <h3>Why Choose Accounts Hub for Your Accounting and IT Education</h3>
+                    <p>At Accounts Hub Education Center, we are dedicated to providing top-notch education in accounting, IT, and business-related courses...</p>
+                    <a href="#" class="btn btn-orange-outline">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="blog-2.jpg" alt="Blog Image">
+                    <div class="date-badge">22<br>Feb</div>
+                </div>
+                <div class="blog-info">
+                    <h3>The Importance of Computerized Accounting in Today's Business World</h3>
+                    <p>As businesses grow and technology advances, computerized accounting has become an essential skill for accountants...</p>
+                    <a href="#" class="btn btn-orange-outline">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="blog3.jpg" alt="Blog Image">
+                    <div class="date-badge">19<br>Feb</div>
+                </div>
+                <div class="blog-info">
+                    <h3>Why Accounting is a Vital Skill for Entrepreneurs</h3>
+                    <p>Accounting isn't just for accountants—it's a vital skill for any entrepreneur. Whether you're running a small business...</p>
+                    <a href="#" class="btn btn-orange-outline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="placement-banner container mb-3">
+        <div class="banner-box">
+            <p>Our Institution Provides 100% Placement Assistance • Authorized Certificates, Marklist & Experience Certificate Provided • Regular & Holiday Batches | Working Hours: 9 AM - 6 PM</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p><strong>Accounts Hub (Accounts, GST, Computer IT Training Centre)</strong></p>
+                <p>Near St. Thomas Church, Adimali Road,<br>Chembumukku Junction, Ernakulam<br>PIN: 682021 Thrikarakara B, Kerala, India</p>
+            </div>
+            <div class="footer-col contact-info">
+                <p><i class="fas fa-phone"></i> +91 9995557010</p>
+                <p><i class="fas fa-phone"></i> +91 9048550002</p>
+                <p><i class="fas fa-envelope"></i> ahub9000@gmail.com</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Useful Links</h4>
+                <div class="links-grid">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Courses</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024. All Rights Reserved | Web Designed by Spiderline</p>
+        </div>
+        <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
+    </footer>
+
 </body>
 </html>
