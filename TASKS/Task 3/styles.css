@@ -37,8 +37,14 @@ ul {
     padding: 0 20px;
 }
 
+.custom-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
 .section-padding {
-    padding: 60px 20px 30px;
+    padding: 60px 20px 40px;
 }
 
 .mt-3 {
@@ -187,37 +193,35 @@ h1, h2, h3, h4 {
     object-fit: contain;
 }
 
-.navbar ul {
+.navbar > ul {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.navbar ul li {
+.navbar > ul > li {
     position: relative;
 }
 
-.navbar ul li a {
+.navbar > ul > li > a {
     font-size: 14px;
     font-weight: 400;
     color: var(--text-dark);
     text-transform: uppercase;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: block;
 }
 
-.navbar ul li.active a {
+.navbar > ul > li.active > a {
     background: #f28c00;
     color: white;
-    padding: 10px 6px;
-    border-radius: 2px;
 }
 
-.navbar ul li a:hover {
-    color: #f28c00;
-}
-
-.navbar ul li.active a:hover {
-    color: white; 
+.navbar > ul > li > a:hover {
+    background: #f28c00;
+    color: white;
 }
 
 .navbar .fa-chevron-down {
@@ -227,14 +231,13 @@ h1, h2, h3, h4 {
 
 .dropdown {
     position: absolute;
-    top: 50px;
+    top: 100%;
     left: 0;
     background: #ffffff;
-    min-width: 110px;
-    border-radius: 8px;
+    min-width: 160px;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    gap: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -242,18 +245,14 @@ h1, h2, h3, h4 {
     transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 100;
-}
-
-.dropdown li a {
-    display: block;
-    padding: 6px 10px;
-    font-size: 13px;
-    font-weight: 400;
-    color: #333;
-    transition: all 0.3s ease;
+    padding: 0;
+    margin: 0;
 }
 
 .dropdown li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
     border-bottom: 1px solid #f1f1f1;
 }
 
@@ -261,7 +260,24 @@ h1, h2, h3, h4 {
     border-bottom: none;
 }
 
-.navbar ul li:hover .dropdown {
+.navbar ul li .dropdown li a {
+    display: block;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-align: left;
+    background: #ffffff;
+}
+
+.navbar ul li .dropdown li a:hover {
+    background: var(--primary-orange);
+    color: white;
+}
+
+.navbar > ul > li:hover .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -344,7 +360,6 @@ h1, h2, h3, h4 {
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
     background: var(--white);
-
     display: flex;
     flex-direction: column;
 }
@@ -437,9 +452,35 @@ h1, h2, h3, h4 {
 }
 
 .diploma-banner img {
-    width: 120%;
+    width: 125%;
     height: 100%;
     object-fit: contain; 
+}
+
+.diploma-content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+    background: rgba(28, 35, 58, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.diploma-content h3 {
+    color: var(--primary-orange);
+    font-size: 36px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.diploma-content p {
+    color: var(--white);
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    font-weight: 400;
 }
 
 .course-form {
@@ -559,7 +600,7 @@ h1, h2, h3, h4 {
 }
 
 .testimonials {
-    padding: 50px 20px 50px;
+    padding: 30px 20px 50px;
 }
 
 .testimonial-grid {
@@ -604,14 +645,12 @@ h1, h2, h3, h4 {
     border-radius: 8px;
     overflow: hidden;
     background: var(--white);
-
     display: flex;
     flex-direction: column;
 }
 
 .blog-info {
     padding: 20px;
-
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -646,10 +685,6 @@ h1, h2, h3, h4 {
     line-height: 1.2;
 }
 
-.blog-info {
-    padding: 20px;
-}
-
 .blog-info h3 {
     font-size: 16px;
     color: var(--primary-blue);
@@ -672,7 +707,7 @@ h1, h2, h3, h4 {
     box-shadow: 0 4px 10px rgba(242, 139, 0, 0.3);
 }
 
-.footer {
+   .footer {
     background-color: var(--primary-blue);
     color: var(--white);
     padding-top: 60px;
@@ -734,6 +769,22 @@ h1, h2, h3, h4 {
 
 .links-grid ul li {
     margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.links-grid ul li::before {
+    content: "\25B6";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-orange);
+    font-size: 10px;
+}
+
+.links-grid a {
+    transition: color 0.3s ease;
 }
 
 .links-grid a:hover {
