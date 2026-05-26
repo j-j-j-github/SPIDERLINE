@@ -1,25 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounts Hub - Educational Center</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="top-line"></div>
+
     <header class="header">
         <div class="container header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Accounts Hub Logo">
-            </div>
-            <nav class="nav-menu">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="Accounts Hub">
+                </div>
+                
                 <ul>
-                    <li><a href="#" class="active">HOME</a></li>
-                    <li><a href="#">ABOUT <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">COURSES <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">MEDIA <i class="fas fa-chevron-down"></i></a></li>
+                    <li class="active">
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT <i class= "fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">COURSES <i class= "fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Accounting</a></li>
+                            <li><a href="#">Finance</a></li>
+                            <li><a href="#">Taxation</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MEDIA <i class= "fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">BLOGS</a></li>
                     <li><a href="#">CONTACT US</a></li>
                 </ul>
@@ -32,8 +60,6 @@
         <div class="hero-content container">
             <h1>IGNITE YOUR PASSION FOR LEARNING</h1>
         </div>
-        <div class="slider-arrow left"><i class="fas fa-chevron-left"></i></div>
-        <div class="slider-arrow right"><i class="fas fa-chevron-right"></i></div>
         <div class="slider-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -45,6 +71,15 @@
         <div class="section-title">
             <h2>OUR <span>COURSES</span></h2>
         </div>
+        <div class="course-nav">
+            <button class="course-arrow left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="course-arrow right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
         <div class="course-grid">
             <div class="course-card">
                 <div class="course-icon"><img src="3.png" alt="QuickBooks"></div>
@@ -80,10 +115,6 @@
         <div class="container flex-row">
             <div class="diploma-banner">
                 <img src="choose-img.jpg" alt="Diploma Courses">
-                <div class="diploma-content">
-                    <h3>DIPLOMA</h3>
-                    <p>COURSES AFTER 12TH</p>
-                </div>
             </div>
             <div class="course-form">
                 <h2>CHOOSE <span>YOUR COURSE</span></h2>
@@ -111,7 +142,7 @@
         <div class="flex-row">
             <div class="about-content half-width">
                 <div class="section-title"><h2>ABOUT <span>ACCOUNTS HUB</span></h2></div>
-                <p>Accounts Hub is one of the leading institutions in Kerala which provides training in many job oriented IT courses. It is founded by highly experienced teachers in the field of finance, Accounting and Taxation. Our staff has the experience of more than 20 years in the industry...</p>
+                <p>Accounts Hub is one of the leading institutions in Kerala offering job-oriented IT, finance, accounting, and taxation courses. Founded by experienced professionals with over 20 years in the industry, we provide personal attention and practical training for students of all levels. We also offer accounting and GST services for firms along with distance education courses such as SSLC, Plus Two, BA, B.Com, MA, M.Com, and MBA. Through our quality education and flexible batches, students can achieve their academic and professional goals while improving career opportunities.</p>
                 <a href="#" class="btn btn-orange">Read More</a>
             </div>
             <div class="uniqueness-content half-width">
@@ -136,7 +167,7 @@
 
     <section class="testimonials bg-light section-padding">
         <div class="container">
-            <div class="section-title text-center"><h2>OUR <span>STUDENT'S SAY</span></h2></div>
+            <div class="section-title text-left"><h2>OUR <span>STUDENT'S SAY</span></h2></div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <p>"If you're looking for quality training in IT or distance education options, Accounts Hub is the place to be! The hands-on approach, experienced trainers, and student-friendly environment make learning smooth and effective."</p>
