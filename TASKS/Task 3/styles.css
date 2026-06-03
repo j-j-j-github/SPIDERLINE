@@ -1064,7 +1064,7 @@ h1, h2, h3, h4 {
 
 .spacer-large {
     margin-top: 10px; 
-    margin-bottom: -80px;
+    margin-bottom: -10px;
 }
 
 .contact-page .contact .section-title {
@@ -1341,4 +1341,206 @@ h1, h2, h3, h4 {
 @keyframes zoomIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+/*COURSES PAGE CSS */
+
+.course-page .course .section-title {
+    text-align: center;
+}
+
+.course-intro-text {
+    max-width: 950px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.course-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+}
+
+.course-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 25px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 4.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgb(32, 20, 62);
+}
+
+.course-card h3 {
+    color: var(--primary-blue, #3b1e7b);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.course-card .view-details {
+    color: var(--primary-orange, #df8c38);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.course-wide-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 40px 50px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 5.12);
+    margin-bottom: 40px;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+}
+
+.course-wide-card h3 {
+    color: var(--primary-blue, #3b1e7b);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.course-wide-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+.course1-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+}
+
+.course1-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 25px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 4.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course1-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgb(32, 20, 62);
+}
+
+.course1-card h3 {
+    color: var(--primary-blue, #3b1e7b);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.course1-cards {
+    font-weight: bold;
+}
+
+
+.course2-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+}
+
+.course2-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 25px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 4.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course2-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgb(32, 20, 62);
+}
+
+.course2-card h3 {
+    color: var(--primary-blue, #3b1e7b);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.course2-cards {
+    font-weight: bold;
+}
+
+.course2-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center; 
+}
+
+.course3-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+}
+
+.course3-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 25px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 4.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course3-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgb(32, 20, 62);
+}
+
+.course3-card h3 {
+    color: var(--primary-blue, #3b1e7b);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.course3-cards {
+    font-weight: bold;
+}
+
+.course3-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center; 
 }
