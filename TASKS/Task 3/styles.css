@@ -1421,7 +1421,6 @@ h1, h2, h3, h4 {
     text-align: justify;
 }
 
-
 .course1-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1543,4 +1542,68 @@ h1, h2, h3, h4 {
     line-height: 1.6;
     color: #666;
     text-align: center; 
+}
+
+.course3-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px; 
+    margin: 0 auto 60px auto;
+    padding: 0 15px;
+}
+
+.course3-card {
+    background: var(--white, #fff);
+    border-radius: 12px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 25px rgba(28, 35, 58, 1.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course3-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(32, 20, 62, 3.18); 
+}
+
+.card-content {
+    flex-grow: 1; 
+    margin-bottom: 25px;
+}
+
+.course3-card h3 {
+    color: #241b4d; 
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.course3-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify; 
+    margin: 0;
+}
+
+.btn-read-more {
+    display: inline-block;
+    background-color: #241b4d; 
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #df8c38; 
+    color: #ffffff;
 }
