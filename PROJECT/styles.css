@@ -1,0 +1,1075 @@
+:root {
+    --primary-red: #e31837;
+    --dark-red: #b3122b;
+    --black: #111111;
+    --dark-grey: #222222;
+    --light-grey: #f4f4f4;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-grey);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-bar {
+    background-color: var(--black);
+    color: #aaaaaa;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
+.contact-info i {
+    color: var(--primary-red);
+    margin-right: 5px;
+}
+
+.quick-links a {
+    color: #aaaaaa;
+    transition: var(--transition);
+}
+
+.quick-links a:hover {
+    color: var(--white);
+}
+
+.quick-links .divider {
+    margin: 0 10px;
+    color: #555;
+}
+
+.header {
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-red);
+    bottom: -5px;
+    left: 25%;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Home About Section */
+.home-about {
+    background-color: var(--white);
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: var(--primary-red);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Home Products Section */
+.home-products {
+    background-color: var(--light-grey);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-img-wrap {
+    height: 220px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-img-wrap img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px 20px;
+    border-top: 1px solid #eee;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-dark-outline {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid var(--black);
+    color: var(--black);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-dark-outline:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.center-action {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-logo {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: var(--transition);
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-links a i {
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-red);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-red);
+}
+
+.hero-slider {
+    position: relative;
+    height: calc(100vh - 116px);
+    min-height: 600px;
+    background: url('https://wallpapercave.com/wp/wp3025514.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.4) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: var(--white);
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: 2px solid var(--primary-red);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-red);
+    border-color: var(--dark-red);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.arrow {
+    pointer-events: auto;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active, .dot:hover {
+    background-color: var(--primary-red);
+    transform: scale(1.2);
+}
+
+.floating-social {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background-color: var(--primary-red);
+    transform: translateX(-5px);
+}
+
+.floating-booking {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.floating-booking:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(227, 24, 55, 0.3);
+}
+
+.booking-text {
+    padding: 0 20px;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.booking-icon {
+    background: var(--primary-red);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+}
+
+.bottom-footer {
+    background-color: var(--black);
+    color: #777;
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* about.html styles */
+.page-header {
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://content.jdmagicbox.com/comp/thiruvananthapuram/u9/0471px471.x471.160616140213.n3u9/catalogue/diya-mobikes-enjakkal-thiruvananthapuram-scooter-dealers-4cjko4b.jpg') center/cover;
+    padding: 180px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--light-grey);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-content h2 {
+    color: var(--primary-red);
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    list-style: none;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    border-top: 3px solid var(--primary-red);
+    border-radius: 0 0 5px 5px;
+}
+
+.nav-links li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px !important;
+    color: var(--dark-grey) !important;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-menu a::after {
+    display: none !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(227, 24, 55, 0.05);
+    color: var(--primary-red) !important;
+    padding-left: 25px !important;
+}
+
+/* --- Contact Page Specific Styles --- */
+        
+.page-header {
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://4.imimg.com/data4/YY/LK/GLADMIN-28216399/a153.jpg') center/cover;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--light-grey);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact-heading {
+    font-size: 28px;
+    color: var(--black);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contact-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+/* Branch Info Cards */
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    background: var(--light-grey);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.info-card:hover {
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left-color: var(--primary-red);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-red);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info-details h4 {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.info-details p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.info-details .phone {
+    font-weight: 600;
+    color: var(--primary-red);
+    margin-top: 10px;
+}
+
+.info-details .phone i {
+    margin-right: 5px;
+}
+
+/* Contact Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    background: var(--light-grey);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--black);
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(227, 24, 55, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: var(--dark-red);
+}
+
+/* advertisments.html styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bottom-footer {
+    margin-top: auto; /* This acts as a spring, pushing the footer down */
+}
+
+/* ==========================================================================
+   PURE CSS SERVICE BOOKING MODAL (NO JS NEEDED)
+   ========================================================================== */
+   .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.8);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* This is the invisible layer behind the white box that lets you click to close */
+.close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* This makes the modal appear when the URL ends in #serviceModal */
+#serviceModal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 10; /* Keeps content above the close-overlay */
+}
+
+/* Animates the box up when targeted */
+#serviceModal:target .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+/* Changed from button to a link for pure CSS to work */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--primary-red);
+}
+
+.modal-content h2 {
+    color: var(--black);
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.mandatory-text {
+    color: var(--primary-red);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.service-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-form .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.service-form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-grey);
+}
+
+.service-form .form-control {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: var(--light-grey);
+}
+
+.service-form .form-control:focus {
+    border-color: var(--primary-red);
+    background: var(--white);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(227, 24, 55, 0.1);
+}
+
+.service-form textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.service-form .submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   BRANCHES / SHOWROOMS PAGE
+   ========================================================================== */
+   .branches-section {
+    padding: 80px 0;
+    background-color: var(--light-grey);
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.branch-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    position: relative;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.branch-image {
+    width: 100%;
+    height: 320px;
+    background-color: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+.branch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.branch-card:hover .branch-image img {
+    transform: scale(1.05);
+}
+
+.branch-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.branch-info {
+    padding: 35px;
+}
+
+.branch-info h3 {
+    color: var(--black);
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.branch-address {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.branch-address i {
+    color: var(--primary-red);
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.branch-departments {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dept-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dept-title {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dept-title i {
+    color: var(--primary-red);
+    margin-right: 8px;
+    width: 18px;
+    text-align: center;
+}
+
+.dept-numbers {
+    color: #666;
+    font-size: 15px;
+    padding-left: 30px; /* Aligns text with the icon */
+    font-family: monospace; /* Makes phone numbers easier to read */
+    font-size: 16px;
+}
