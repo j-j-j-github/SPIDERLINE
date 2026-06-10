@@ -6,24 +6,57 @@
     <title>Diya Hero | Modern Dealership</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- All styles are now linked via this external file -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .product-toggle {
+            display: flex;
+            justify-content: center;
+            background: var(--white);
+            border-radius: 40px;
+            width: max-content;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 2px solid var(--white);
+        }
+        
+        .toggle-btn {
+            padding: 12px 35px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--black);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 35px;
+            user-select: none;
+        }
+
+        /* Hide the actual grids by default */
+        .bikes-grid, .scooters-grid {
+            display: none; 
+        }
+
+        /* When the invisible bikes radio is checked, show bikes grid */
+        #show-bikes:checked ~ .bikes-grid {
+            display: grid;
+        }
+
+        /* When the invisible scooters radio is checked, show scooters grid */
+        #show-scooters:checked ~ .scooters-grid {
+            display: grid;
+        }
+
+        /* Style the active label based on which radio is checked */
+        #show-bikes:checked ~ .product-toggle #label-bikes,
+        #show-scooters:checked ~ .product-toggle #label-scooters {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+    </style>
 </head>
 <body>
-
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +91 12345 67890</span>
-                <span><i class="fas fa-envelope"></i> info@diyahero.com</span>
-            </div>
-            <div class="quick-links">
-                <a href="#">Go to Group Website</a>
-                <span class="divider">|</span>
-                <a href="#">Feedback</a>
-            </div>
-        </div>
-    </div>
 
     <header class="header">
         <div class="container nav-container">
@@ -70,21 +103,7 @@
             <p>Welcome to Diya Hero. Discover our latest range of motorcycles and scooters with unmatched performance and style.</p>
             <div class="hero-buttons">
                 <a href="#products" class="btn btn-primary">Explore Products</a>
-                <a href="#" class="btn btn-outline">Find a Branch</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-about section-padding">
-        <div class="container about-flex">
-            <div class="about-text">
-                <h3>Welcome to Diya Hero</h3>
-                <p>Diya Hero is the Authorized Dealer of Hero Motocorp in Kollam and Thiruvananthapuram Districts. We started our journey in March 2007 with a clear vision: to provide an outstanding purchase and ownership experience to every customer.</p>
-                <p>Today, we are among the top dealerships in Kerala, featuring a huge Sales and Service infrastructure with experienced staff, capable of servicing over 100 vehicles per day.</p>
-                <a href="about.html" class="btn btn-primary">Read More About Us</a>
-            </div>
-            <div class="about-image">
-                <img src="https://content.jdmagicbox.com/comp/thiruvananthapuram/k8/0471px471.x471.160507103016.p7k8/catalogue/diya-hero-vallakkadavu-thiruvananthapuram-motorcycle-repair-and-services-a4sx09.jpg" alt="Diya Hero Showroom">
+                <a href="branches.html" class="btn btn-outline">Find a Branch</a>
             </div>
         </div>
     </section>
@@ -96,10 +115,18 @@
                 <p>Discover the perfect blend of power, mileage, and style.</p>
             </div>
 
-            <div class="product-grid">
+            <input type="radio" name="product-type" id="show-bikes" hidden checked>
+            <input type="radio" name="product-type" id="show-scooters" hidden>
+
+            <div class="product-toggle">
+                <label for="show-bikes" class="toggle-btn" id="label-bikes">Bikes</label>
+                <label for="show-scooters" class="toggle-btn" id="label-scooters">Scooters</label>
+            </div>
+
+            <div class="product-grid category-grid bikes-grid">
                 <div class="product-card">
                     <div class="product-img-wrap">
-                        <img src="https://diyahero.com/uploads/products/200S.png" alt="Hero Xtreme 160R">
+                        <img src="https://diyahero.com/uploads/products/200S.png" alt="Hero Xtreme 200S">
                     </div>
                     <div class="product-info">
                         <h3>XTREME 200S 4V</h3>
@@ -110,7 +137,7 @@
 
                 <div class="product-card">
                     <div class="product-img-wrap">
-                        <img src="https://diyahero.com/uploads/products/HF%20100.png" alt="Hero Splendor Plus">
+                        <img src="https://diyahero.com/uploads/products/HF%20100.png" alt="Hero HF 100">
                     </div>
                     <div class="product-info">
                         <h3>HF 100</h3>
@@ -121,11 +148,68 @@
 
                 <div class="product-card">
                     <div class="product-img-wrap">
+                        <img src="https://diyahero.com/uploads/products/splendor.png" alt="Hero Splendor Plus">
+                    </div>
+                    <div class="product-info">
+                        <h3>Splendor Plus</h3>
+                        <p>The legendary ride with uncompromised mileage.</p>
+                        <a href="#" class="btn-dark-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://diyahero.com/uploads/products/rally%20pro.png" alt="Hero Glamour">
+                    </div>
+                    <div class="product-info">
+                        <h3>XPULSE 200 RALLY PRO</h3>
+                        <p>Advanced technology combined with everyday practicality.</p>
+                        <a href="#" class="btn-dark-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid category-grid scooters-grid">
+                <div class="product-card">
+                    <div class="product-img-wrap">
                         <img src="https://diyahero.com/uploads/products/DESTINI.png" alt="Hero Destini 125">
                     </div>
                     <div class="product-info">
                         <h3>Destini 125</h3>
                         <p>A premium scooter combining classic elegance with modern tech.</p>
+                        <a href="#" class="btn-dark-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://diyahero.com/uploads/products/EDGE.png" alt="Hero Maestro Edge">
+                    </div>
+                    <div class="product-info">
+                        <h3>Maestro Edge</h3>
+                        <p>Sharp lines and a bold stance designed for the city.</p>
+                        <a href="#" class="btn-dark-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://diyahero.com/uploads/products/PLR.png" alt="Hero Pleasure+">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pleasure+ XTEC</h3>
+                        <p>Lightweight, peppy, and equipped with smart features.</p>
+                        <a href="#" class="btn-dark-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://diyahero.com/uploads/products/XOOM.png" alt="Hero Xoom">
+                    </div>
+                    <div class="product-info">
+                        <h3>Xoom 110</h3>
+                        <p>Sporty design with industry-first cornering lights.</p>
                         <a href="#" class="btn-dark-outline">View Details</a>
                     </div>
                 </div>
@@ -137,7 +221,20 @@
         </div>
     </section>
 
-    <!-- Floating Social UI Elements -->
+    <section class="home-about section-padding">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h3>About Diya Hero</h3>
+                <p>Diya Hero is the Authorized Dealer of Hero Motocorp in Kollam and Thiruvananthapuram Districts. We started our journey in March 2007 with a clear vision: to provide an outstanding purchase and ownership experience to every customer.</p>
+                <p>Today, we are among the top dealerships in Kerala, featuring a huge Sales and Service infrastructure with experienced staff, capable of servicing over 100 vehicles per day.</p>
+                <a href="about.html" class="btn btn-primary">Read More About Us</a>
+            </div>
+            <div class="about-image">
+                <img src="https://content.jdmagicbox.com/comp/thiruvananthapuram/k8/0471px471.x471.160507103016.p7k8/catalogue/diya-hero-vallakkadavu-thiruvananthapuram-motorcycle-repair-and-services-a4sx09.jpg" alt="Diya Hero Showroom">
+            </div>
+        </div>
+    </section>
+
     <div class="floating-social">
         <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social-icon tw"><i class="fab fa-twitter"></i></a>
@@ -145,19 +242,15 @@
         <a href="#" class="social-icon yt"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <!-- 1. The Trigger Button linking to #serviceModal -->
     <a href="#serviceModal" class="floating-booking">
         <div class="booking-text">SERVICE BOOKING</div>
         <div class="booking-icon"><i class="fas fa-wrench"></i></div>
     </a>
 
-    <!-- 2. The Pure CSS Modal -->
     <div class="modal-overlay" id="serviceModal">
-        <!-- Clicking this empty link background closes the modal -->
         <a href="#" class="close-overlay"></a>
         
         <div class="modal-content">
-            <!-- Clicking the X closes the modal -->
             <a href="#" class="modal-close">&times;</a>
             
             <h2>Service Booking</h2>
@@ -206,7 +299,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bottom-footer">
         <div class="container footer-flex">
             <p>Copyright © 2026 @Diya Motors Pvt Ltd. All Rights Reserved.</p>
@@ -214,32 +306,5 @@
         </div>
     </footer>
 
-    <!-- Scripts for the Modal logic -->
-    <script>
-        const modal = document.getElementById('serviceModal');
-        const openBtn = document.getElementById('openBookingModal');
-        const closeBtn = document.getElementById('closeModal');
-
-        // Open Modal
-        openBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevents page jumping to top
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevents scrolling behind the popup
-        });
-
-        // Close Modal
-        closeBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; 
-        });
-
-        // Close Modal if user clicks on the dark background outside the white box
-        window.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
 </body>
 </html>

@@ -15,6 +15,34 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.nav-links {
+    gap: 20px !important; 
+}
+.nav-links > li {
+    position: relative;
+    padding-right: 20px;
+}
+/* Draws the vertical line on all items EXCEPT the last one */
+.nav-links > li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 14px;
+    width: 1px;
+    background-color: red;
+}
+
+.hero-content h1 {
+    font-size: 46px 
+}
+
+.home-products {
+    background: linear-gradient(rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') center/cover no-repeat !important;
+}
+
+
 body {
     background-color: var(--light-grey);
     color: var(--black);
@@ -156,8 +184,8 @@ a {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     margin-bottom: 40px;
 }
 
@@ -300,7 +328,7 @@ a {
     position: relative;
     height: calc(100vh - 116px);
     min-height: 600px;
-    background: url('https://wallpapercave.com/wp/wp3025514.jpg') center/cover no-repeat;
+    background: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
@@ -629,10 +657,10 @@ a {
     padding-left: 25px !important;
 }
 
-/* --- Contact Page Specific Styles --- */
+/* Contact Page Specific Styles */
         
 .page-header {
-    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://4.imimg.com/data4/YY/LK/GLADMIN-28216399/a153.jpg') center/cover;
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('media/bikes.jpg') center/cover;
     padding: 80px 0;
     text-align: center;
     color: var(--white);
@@ -781,7 +809,7 @@ textarea.form-control {
     background: var(--dark-red);
 }
 
-/* advertisments.html styles */
+
 body {
     display: flex;
     flex-direction: column;
@@ -789,12 +817,10 @@ body {
 }
 
 .bottom-footer {
-    margin-top: auto; /* This acts as a spring, pushing the footer down */
+    margin-top: auto; 
 }
 
-/* ==========================================================================
-   PURE CSS SERVICE BOOKING MODAL (NO JS NEEDED)
-   ========================================================================== */
+/* CSS SERVICE BOOKING MODAL*/
    .modal-overlay {
     position: fixed;
     top: 0;
@@ -812,7 +838,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* This is the invisible layer behind the white box that lets you click to close */
 .close-overlay {
     position: absolute;
     top: 0;
@@ -822,7 +847,6 @@ body {
     cursor: default;
 }
 
-/* This makes the modal appear when the URL ends in #serviceModal */
 #serviceModal:target {
     opacity: 1;
     visibility: visible;
@@ -840,15 +864,14 @@ body {
     box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     max-height: 90vh;
     overflow-y: auto;
-    z-index: 10; /* Keeps content above the close-overlay */
+    z-index: 10; 
 }
 
-/* Animates the box up when targeted */
+
 #serviceModal:target .modal-content {
     transform: translateY(0) scale(1);
 }
 
-/* Changed from button to a link for pure CSS to work */
 .modal-close {
     position: absolute;
     top: 20px;
@@ -948,9 +971,7 @@ body {
     cursor: pointer;
 }
 
-/* ==========================================================================
-   BRANCHES / SHOWROOMS PAGE
-   ========================================================================== */
+/* BRANCHES / SHOWROOMS PAGE */
    .branches-section {
     padding: 80px 0;
     background-color: var(--light-grey);
@@ -969,6 +990,34 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: var(--transition);
     position: relative;
+    display: flex;             
+    flex-direction: column;    
+}
+
+
+.branch-info {
+    padding: 35px;
+    display: flex;            
+    flex-direction: column;    
+    flex-grow: 1;             
+}
+
+
+.branch-departments {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 25px;       
+}
+
+.branch-map {
+    margin-top: auto;          
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    line-height: 0; 
 }
 
 .branch-card:hover {
@@ -1009,10 +1058,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.branch-info {
-    padding: 35px;
-}
-
 .branch-info h3 {
     color: var(--black);
     font-size: 28px;
@@ -1035,14 +1080,6 @@ body {
     color: var(--primary-red);
     margin-top: 5px;
     font-size: 18px;
-}
-
-.branch-departments {
-    border-top: 1px solid #eee;
-    padding-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .dept-item {
@@ -1069,7 +1106,7 @@ body {
 .dept-numbers {
     color: #666;
     font-size: 15px;
-    padding-left: 30px; /* Aligns text with the icon */
-    font-family: monospace; /* Makes phone numbers easier to read */
+    padding-left: 30px; 
+    font-family: monospace; 
     font-size: 16px;
 }
