@@ -35,13 +35,8 @@
 }
 
 .hero-content h1 {
-    font-size: 46px 
+    font-size: 46px ;
 }
-
-.home-products {
-    background: linear-gradient(rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') center/cover no-repeat !important;
-}
-
 
 body {
     background-color: var(--light-grey);
@@ -97,6 +92,7 @@ a {
 
 .header {
     background-color: var(--white);
+    border-top: 3px solid var(--primary-red);
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
@@ -140,6 +136,7 @@ a {
 /* Home About Section */
 .home-about {
     background-color: var(--white);
+    padding-top: 20px;
 }
 
 .about-flex {
@@ -163,6 +160,7 @@ a {
     color: #555;
     line-height: 1.8;
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .about-image {
@@ -175,11 +173,6 @@ a {
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: block;
-}
-
-/* Home Products Section */
-.home-products {
-    background-color: var(--light-grey);
 }
 
 .product-grid {
@@ -260,7 +253,7 @@ a {
 
 .center-action {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .nav-container {
@@ -327,7 +320,7 @@ a {
 .hero-slider {
     position: relative;
     height: calc(100vh - 116px);
-    min-height: 600px;
+    min-height: 700px;
     background: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;

@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diya Hero | About Us</title>
+    <title>XOOM ZX | Diya Hero</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-detail-section { padding: 80px 0; background-color: var(--white); }
+        .product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+        .product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
+        .product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
+        .product-info-container { flex: 1; min-width: 300px; }
+        .product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
+        .product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
+        .specs-list { list-style: none; margin-bottom: 30px; }
+        .specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .specs-list li strong { color: var(--black); }
+        .specs-list li span { color: #666; font-weight: 500; }
+    </style>
 </head>
 <body>
 
-
-
-    <header class="header">
+<header class="header">
         <div class="container nav-container">
             <a href="index.html" class="logo-wrapper">
                 <img src="media/logo.png" alt="Diya Hero Logo" class="main-logo">
@@ -21,11 +32,11 @@
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     
                     <!-- Products Dropdown -->
                     <li class="dropdown">
-                        <a href="#">Products <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="active">Products <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="scooters.html">Scooters</a></li>
                             <li><a href="bikes.html">Bikes</a></li>
@@ -53,32 +64,31 @@
         </div>
     </header>
 
-    <div class="page-header" style="background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://mohanahero.in/wp-content/uploads/2023/05/banner-web.jpeg');">
-        <div class="container">
-            <h1>About Us</h1>
-        </div>
-    </div>
+    <section class="product-detail-section">
+        <div class="container product-detail-flex">
+            <div class="product-image-container">
+                <img src="https://diyahero.com/uploads/products/XOOM.png" alt="XOOM ZX">
+            </div>
+            <div class="product-info-container">
+                <h2>XOOM ZX</h2>
+                <p class="desc">India's most trusted commuter. Reliable, efficient, and iconic.</p>
+                
+                <h3 style="margin-bottom: 15px; color: var(--primary-red);">Specifications</h3>
+                <ul class="specs-list">
+                    <li><strong>Engine:</strong> <span>110.9 cc, Air cooled</span></li>
+                    <li><strong>Max Power:</strong> <span>6.0 kW @ 7250 rpm</span></li>
+                    <li><strong>Max Torque:</strong> <span>8.7 Nm @ 5750 rpm</span></li>
+                    <li><strong>Brakes:</strong> <span>Disc</span></li>
+                    <li><strong>Suspension:</strong> <span>Telescopic Hydraulic</span></li>
+                </ul>
 
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2>About Diya</h2>
-                
-                <p>Diya Hero is the Authorized Dealer of Hero Motocorp in Kollam and Thiruvananthapuram Districts. We started our business with Hero Motocorp in March 2007 at Kollam and in 2016 March at Thiruvananthapuram. We are providing nice purchase experience to our customers. As a result of that, Now we are top Dealerships in Kerala. Huge Sales and Service Section with experienced and dedicated staffs. Large service area can service more than 100 vehicles per day. Diya Hero having authorized Networks in almost all the important centres in both District.</p>
-                
-                <p>Diya Group extended our business to neighbouring Districts also because of the outstanding performance and customer satisfaction.</p>
-                
-                <p>Diya Automobiles is the Authorized Hero Motocorp Parts Distributor in Kerala. Any Spare Parts requirement will be treating and doing delivery without any delay. Diya Automobiles is situated in Prathibha Junction, Kollam.</p>
-                
-                <p>Hero Motocorp awarded Diya Hero in a lot of parameters for the excellent performance in Sales, Service and Spares. We are having a stock of more than 1000 vehicles and wide range of selection is also available here.</p>
-                
-                <p>With Strong determination for customer satisfaction we have developed a strong loyal customer-base. We provide free safety class to customers at the showroom periodically for safe and trouble free driving.</p>
-
-                <p>We are committed for total customer satisfaction. Our professional staff will help you in buying process and offer test rides to give you a feel of the product. We strictly follow the first come first serve policy and always make sure that vehicle is delivered at the earliest to the customers.</p>
+                <a href="scooters.html" class="btn" style="display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white);"><i class="fas fa-arrow-left"></i> Back to Scooters</a>
+                <a href="#serviceModal" class="btn btn-primary" style="display:inline-block;">Book Now</a>
             </div>
         </div>
     </section>
 
+<!-- Floating UI Elements -->
     <div class="floating-social">
         <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social-icon tw"><i class="fab fa-twitter"></i></a>
@@ -147,6 +157,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bottom-footer">
         <div class="container footer-flex">
             <p>Copyright © 2026 @Diya Motors Pvt Ltd. All Rights Reserved.</p>
@@ -155,4 +166,3 @@
     </footer>
 
 </body>
-</html>
