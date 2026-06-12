@@ -7,19 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .product-detail-section { padding: 80px 0; background-color: var(--white); }
-        .product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-        .product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
-        .product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
-        .product-info-container { flex: 1; min-width: 300px; }
-        .product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
-        .product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
-        .specs-list { list-style: none; margin-bottom: 30px; }
-        .specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
-        .specs-list li strong { color: var(--black); }
-        .specs-list li span { color: #666; font-weight: 500; }
-    </style>
+    
 </head>
 <body>
 
@@ -34,7 +22,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     
-                    <!-- Products Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="#" class="active">Products <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -43,12 +31,12 @@
                         </ul>
                     </li>
             
-                    <!-- Branches Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="branches.html">Branches </a>
                     </li>
             
-                    <!-- Media Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="#">Media <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -73,7 +61,7 @@
                 <h2>DESTINI PRIME 125 CC</h2>
                 <p class="desc">India's most trusted commuter. Reliable, efficient, and iconic.</p>
                 
-                <h3 style="margin-bottom: 15px; color: var(--primary-red);">Specifications</h3>
+                <h3 class="specs-heading">Specifications</h3>
                 <ul class="specs-list">
                     <li><strong>Engine:</strong> <span>124.6 cc, Air cooled, 4-stroke</span></li>
                     <li><strong>Max Power:</strong> <span>6.7 kW @ 7000 rpm</span></li>
@@ -82,13 +70,13 @@
                     <li><strong>Suspension:</strong> <span>Telescopic Hydraulic</span></li>
                 </ul>
 
-                <a href="scooters.html" class="btn" style="display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white);"><i class="fas fa-arrow-left"></i> Back to Scooters</a>
-                <a href="#serviceModal" class="btn btn-primary" style="display:inline-block;">Book Now</a>
+                <a href="scooters.html" class="btn btn-black-inline"><i class="fas fa-arrow-left"></i> Back to Scooters</a>
+                <a href="#serviceModal" class="btn btn-primary btn-inline">Book Now</a>
             </div>
         </div>
     </section>
 
-<!-- Floating UI Elements -->
+
     <div class="floating-social">
         <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social-icon tw"><i class="fab fa-twitter"></i></a>
@@ -96,19 +84,19 @@
         <a href="#" class="social-icon yt"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <!-- 1. The Trigger Button linking to #serviceModal -->
+    
     <a href="#serviceModal" class="floating-booking">
         <div class="booking-text">SERVICE BOOKING</div>
         <div class="booking-icon"><i class="fas fa-wrench"></i></div>
     </a>
 
-    <!-- 2. The Pure CSS Modal -->
+    
     <div class="modal-overlay" id="serviceModal">
-        <!-- Clicking this empty link background closes the modal -->
+        
         <a href="#" class="close-overlay"></a>
         
         <div class="modal-content">
-            <!-- Clicking the X closes the modal -->
+            
             <a href="#" class="modal-close">&times;</a>
             
             <h2>Service Booking</h2>
@@ -157,7 +145,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    
     <footer class="bottom-footer">
         <div class="container footer-flex">
             <p>Copyright © 2026 @Diya Motors Pvt Ltd. All Rights Reserved.</p>

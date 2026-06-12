@@ -1,225 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diya Hero | Modern Dealership</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
 
-        .home-products {
-            /* Falling grey color is moved to the top *if* image fails to load */
-            background-color: #f4f4f4; 
-            
-            /* Revised: Step back to root, use image, and required opacity overlay. */
-            background-image: linear-gradient(to right, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') !important;
-            background-position: center !important;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            padding-top: 40px; 
-        }
-
-        .product-toggle {
-            display: flex;
-            justify-content: center;
-            background: var(--white);
-            border-radius: 40px;
-            width: max-content;
-            margin: 0 auto 60px auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-            border: 2px solid var(--white);
-        }
-        
-        .toggle-btn {
-            padding: 12px 35px;
-            font-size: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--black);
-            cursor: pointer;
-            transition: var(--transition);
-            border-radius: 35px;
-            user-select: none;
-        }
-
-        /* Hide the actual grids by default */
-        .bikes-grid, .scooters-grid {
-            display: none; 
-        }
-
-        /* When the invisible bikes radio is checked, show bikes grid */
-        #show-bikes:checked ~ .bikes-grid {
-            display: grid;
-        }
-
-        /* When the invisible scooters radio is checked, show scooters grid */
-        #show-scooters:checked ~ .scooters-grid {
-            display: grid;
-        }
-
-        /* Style the active label based on which radio is checked */
-        #show-bikes:checked ~ .product-toggle #label-bikes,
-        #show-scooters:checked ~ .product-toggle #label-scooters {
-            background: var(--primary-red);
-            color: var(--white);
-        }
-
-        .view-all-link {
-            display: none;
-        }
-
-        #show-bikes:checked ~ .center-action .view-all-bikes {
-            display: inline-block;
-        }
-
-        #show-scooters:checked ~ .center-action .view-all-scooters {
-            display: inline-block;
-        }
-
-        
-        /* Pure CSS Slider */
-        .css-slider-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-        .css-slider-container input {
-            display: none;
-        }
-        .css-slides {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        .css-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0;
-            z-index: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .css-slider-container.autoplay .css-slide.s1 { animation: cssFade1 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s2 { animation: cssFade2 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s3 { animation: cssFade3 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s4 { animation: cssFade4 20s infinite; }
-
-        @keyframes cssFade1 { 0%, 20% { opacity: 1; z-index: 2; } 25%, 95% { opacity: 0; z-index: 1; } 100% { opacity: 1; z-index: 2; } }
-        @keyframes cssFade2 { 0%, 20% { opacity: 0; z-index: 1; } 25%, 45% { opacity: 1; z-index: 2; } 50%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade3 { 0%, 45% { opacity: 0; z-index: 1; } 50%, 70% { opacity: 1; z-index: 2; } 75%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade4 { 0%, 70% { opacity: 0; z-index: 1; } 75%, 95% { opacity: 1; z-index: 2; } 100% { opacity: 0; z-index: 1; } }
-
-        input#s1:checked ~ .css-slides .s1,
-        input#s2:checked ~ .css-slides .s2,
-        input#s3:checked ~ .css-slides .s3,
-        input#s4:checked ~ .css-slides .s4 {
-            opacity: 1;
-            z-index: 3;
-            animation: none;
-        }
-        input#s1:checked ~ .css-slides .css-slide,
-        input#s2:checked ~ .css-slides .css-slide,
-        input#s3:checked ~ .css-slides .css-slide,
-        input#s4:checked ~ .css-slides .css-slide {
-            animation: none;
-        }
-
-        .css-controls {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 40px;
-            z-index: 0;
-            opacity: 0;
-            pointer-events: none;
-        }
-        .css-controls label {
-            pointer-events: auto;
-        }
-
-        .css-slider-container.autoplay .css-controls.c1 { animation: cssCtrl1 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c2 { animation: cssCtrl2 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c3 { animation: cssCtrl3 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c4 { animation: cssCtrl4 20s infinite; }
-
-        @keyframes cssCtrl1 { 0%, 24% { z-index: 10; opacity: 1; } 25%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl2 { 0%, 24% { z-index: 0; opacity: 0; } 25%, 49% { z-index: 10; opacity: 1; } 50%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl3 { 0%, 49% { z-index: 0; opacity: 0; } 50%, 74% { z-index: 10; opacity: 1; } 75%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl4 { 0%, 74% { z-index: 0; opacity: 0; } 75%, 99% { z-index: 10; opacity: 1; } 100% { z-index: 0; opacity: 0; } }
-
-        input#s1:checked ~ .c1,
-        input#s2:checked ~ .c2,
-        input#s3:checked ~ .c3,
-        input#s4:checked ~ .c4 {
-            z-index: 10;
-            opacity: 1;
-            animation: none;
-        }
-        input#s1:checked ~ .css-controls,
-        input#s2:checked ~ .css-controls,
-        input#s3:checked ~ .css-controls,
-        input#s4:checked ~ .css-controls {
-            animation: none;
-        }
-
-        .css-dots {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
-        .css-dots label {
-            width: 10px;
-            height: 10px;
-            background-color: rgba(255,255,255,0.4);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .css-slider-container.autoplay .css-dots label.d1 { animation: cssDot1 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d2 { animation: cssDot2 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d3 { animation: cssDot3 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d4 { animation: cssDot4 20s infinite; }
-
-        @keyframes cssDot1 { 0%, 24% { background: var(--primary-red); transform: scale(1.2); } 25%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot2 { 0%, 24% { background: rgba(255,255,255,0.4); transform: scale(1); } 25%, 49% { background: var(--primary-red); transform: scale(1.2); } 50%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot3 { 0%, 49% { background: rgba(255,255,255,0.4); transform: scale(1); } 50%, 74% { background: var(--primary-red); transform: scale(1.2); } 75%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot4 { 0%, 74% { background: rgba(255,255,255,0.4); transform: scale(1); } 75%, 99% { background: var(--primary-red); transform: scale(1.2); } 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-
-        input#s1:checked ~ .css-dots .d1,
-        input#s2:checked ~ .css-dots .d2,
-        input#s3:checked ~ .css-dots .d3,
-        input#s4:checked ~ .css-dots .d4 {
-            background: var(--primary-red);
-            transform: scale(1.2);
-            animation: none;
-        }
-        input#s1:checked ~ .css-dots label,
-        input#s2:checked ~ .css-dots label,
-        input#s3:checked ~ .css-dots label,
-        input#s4:checked ~ .css-dots label {
-            animation: none;
-        }
     </style>
-</style>
 </head>
+
 <body>
 
     <header class="header">
@@ -232,7 +25,7 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    
+
                     <li class="dropdown">
                         <a href="#">Products <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -240,11 +33,11 @@
                             <li><a href="bikes.html">Bikes</a></li>
                         </ul>
                     </li>
-            
+
                     <li class="dropdown">
                         <a href="branches.html">Branches </a>
                     </li>
-            
+
                     <li class="dropdown">
                         <a href="#">Media <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -253,7 +46,7 @@
                             <li><a href="gallery.html">Gallery</a></li>
                         </ul>
                     </li>
-            
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -268,10 +61,10 @@
             <input type="radio" name="slider" id="s4">
 
             <div class="css-slides">
-                <div class="css-slide s1" style="background-image: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg');"></div>
-                <div class="css-slide s2" style="background-image: url('https://hgpmart.wordpress.com/wp-content/uploads/2019/07/xpulse.png');"></div>
-                <div class="css-slide s3" style="background-image: url('https://images.hindustantimes.com/auto/img/2021/03/05/960x540/home-img_1614919901272_1614919913051.jpg');"></div>
-                <div class="css-slide s4" style="background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Flarge%2Fhero%2Fxpulse-200t-4v%2Fhero-xpulse-200t-4v.jpg%3Fv%3D6&w=1920&q=80');"></div>
+                <div class="css-slide s1 bg-image-86284b"></div>
+                <div class="css-slide s2 bg-image-3c4152"></div>
+                <div class="css-slide s3 bg-image-66ae2b"></div>
+                <div class="css-slide s4 bg-image-e206a8"></div>
             </div>
 
             <div class="css-controls c1">
@@ -302,7 +95,8 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Experience the Thrill<br>of the Ride</h1>
-            <p>Welcome to Diya Hero. Discover our latest range of motorcycles and scooters with unmatched performance and style.</p>
+            <p>Welcome to Diya Hero. Discover our latest range of motorcycles and scooters with unmatched performance
+                and style.</p>
             <div class="hero-buttons">
                 <a href="#products" class="btn btn-primary">Explore Products</a>
                 <a href="branches.html" class="btn btn-outline">Find a Branch</a>
@@ -428,12 +222,16 @@
         <div class="container about-flex">
             <div class="about-text">
                 <h3>About Diya Hero</h3>
-                <p>Diya Hero is the Authorized Dealer of Hero Motocorp in Kollam and Thiruvananthapuram Districts. We started our journey in March 2007 with a clear vision: to provide an outstanding purchase and ownership experience to every customer.</p>
-                <p>Today, we are among the top dealerships in Kerala, featuring a huge Sales and Service infrastructure with experienced staff, capable of servicing over 100 vehicles per day.</p>
-                <a href="about.html" class="btn btn-primary">Read More About Us</a>
+                <p>Diya Hero is the Authorized Dealer of Hero Motocorp in Kollam and Thiruvananthapuram Districts. We
+                    started our journey in March 2007 with a clear vision: to provide an outstanding purchase and
+                    ownership experience to every customer.</p>
+                <p>Today, we are among the top dealerships in Kerala, featuring a huge Sales and Service infrastructure
+                    with experienced staff, capable of servicing over 100 vehicles per day.</p>
+                <a href="about.html" class="btn btn-primary">Read More</a>
             </div>
             <div class="about-image">
-                <img src="https://content.jdmagicbox.com/comp/thiruvananthapuram/k8/0471px471.x471.160507103016.p7k8/catalogue/diya-hero-vallakkadavu-thiruvananthapuram-motorcycle-repair-and-services-a4sx09.jpg" alt="Diya Hero Showroom">
+                <img src="https://content.jdmagicbox.com/comp/thiruvananthapuram/k8/0471px471.x471.160507103016.p7k8/catalogue/diya-hero-vallakkadavu-thiruvananthapuram-motorcycle-repair-and-services-a4sx09.jpg"
+                    alt="Diya Hero Showroom">
             </div>
         </div>
     </section>
@@ -452,13 +250,13 @@
 
     <div class="modal-overlay" id="serviceModal">
         <a href="#" class="close-overlay"></a>
-        
+
         <div class="modal-content">
             <a href="#" class="modal-close">&times;</a>
-            
+
             <h2>Service Booking</h2>
             <p class="mandatory-text">( * Mandatory Fields )</p>
-            
+
             <form action="#" method="POST" class="service-form">
                 <div class="form-group">
                     <label>Name *</label>
@@ -493,7 +291,8 @@
                 </div>
                 <div class="form-group full-width">
                     <label>Description *</label>
-                    <textarea class="form-control" required placeholder="Briefly describe the service required..."></textarea>
+                    <textarea class="form-control" required
+                        placeholder="Briefly describe the service required..."></textarea>
                 </div>
                 <div class="form-group full-width">
                     <button type="submit" class="btn btn-primary submit-btn">Confirm Booking</button>
@@ -510,4 +309,5 @@
     </footer>
 
 </body>
+
 </html>

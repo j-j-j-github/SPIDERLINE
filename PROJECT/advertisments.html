@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh; background-color: var(--white);">
+<body class="body-flex">
 
 
 
@@ -23,7 +23,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" >About Us</a></li>
                     
-                    <!-- Products Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="#">Products <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -32,12 +32,12 @@
                         </ul>
                     </li>
             
-                    <!-- Branches Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="branches.html">Branches </a>
                     </li>
             
-                    <!-- Media Dropdown -->
+                    
                     <li class="dropdown">
                         <a href="#" class="active">Media <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -59,11 +59,11 @@
         </div>
     </div>
 
-    <section class="empty-media-section section-padding" style="text-align: center; min-height: 40vh; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: var(--white);">
+    <section class="empty-media-section section-padding empty-media-flex">
         <div class="container">
-            <i class="fas fa-photo-video" style="font-size: 60px; color: #ccc; margin-bottom: 20px;"></i>
-            <h2 style="font-size: 28px; color: var(--black); margin-bottom: 10px;">No Media to Show</h2>
-            <p style="color: #777; font-size: 16px;">Check back later for new updates!</p>
+            <i class="fas fa-photo-video empty-media-icon"></i>
+            <h2 class="empty-media-title">No Media to Show</h2>
+            <p class="empty-media-desc">Check back later for new updates!</p>
         </div>
     </section>
 
@@ -74,19 +74,19 @@
         <a href="#" class="social-icon yt"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <!-- 1. The Trigger Button linking to #serviceModal -->
+    
     <a href="#serviceModal" class="floating-booking">
         <div class="booking-text">SERVICE BOOKING</div>
         <div class="booking-icon"><i class="fas fa-wrench"></i></div>
     </a>
 
-    <!-- 2. The Pure CSS Modal -->
+    
     <div class="modal-overlay" id="serviceModal">
-        <!-- Clicking this empty link background closes the modal -->
+        
         <a href="#" class="close-overlay"></a>
         
         <div class="modal-content">
-            <!-- Clicking the X closes the modal -->
+            
             <a href="#" class="modal-close">&times;</a>
             
             <h2>Service Booking</h2>

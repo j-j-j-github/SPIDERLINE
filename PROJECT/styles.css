@@ -333,6 +333,7 @@ a {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.4) 100%);
+    pointer-events: none;
 }
 
 .hero-content {
@@ -1103,3 +1104,255 @@ body {
     font-family: monospace; 
     font-size: 16px;
 }
+
+/* xoom_zx.html specific styles */
+.product-detail-section { padding: 80px 0; background-color: var(--white); }
+.product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+.product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
+.product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
+.product-info-container { flex: 1; min-width: 300px; }
+.product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
+.product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
+.specs-list { list-style: none; margin-bottom: 30px; }
+.specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+.specs-list li strong { color: var(--black); }
+.specs-list li span { color: #666; font-weight: 500; }
+.specs-heading { margin-bottom: 15px; color: var(--primary-red); }
+.btn-black-inline { display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white); }
+.btn-inline { display:inline-block; }
+
+
+/* Extracted styles */
+.empty-media-flex { text-align: center; min-height: 40vh; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: var(--white); }
+.bg-image-86284b { background-image: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg'); }
+.bg-image-e206a8 { background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Flarge%2Fhero%2Fxpulse-200t-4v%2Fhero-xpulse-200t-4v.jpg%3Fv%3D6&w=1920&q=80'); }
+.product-detail-section { padding: 80px 0; background-color: var(--white); }
+        .product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+        .product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
+        .product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
+        .product-info-container { flex: 1; min-width: 300px; }
+        .product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
+        .product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
+        .specs-list { list-style: none; margin-bottom: 30px; }
+        .specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .specs-list li strong { color: var(--black); }
+        .specs-list li span { color: #666; font-weight: 500; }
+.btn-inline { display:inline-block; }
+.empty-media-icon { font-size: 60px; color: #ccc; margin-bottom: 20px; }
+.empty-media-desc { color: #777; font-size: 16px; }
+.bg-image-3c4152 { background-image: url('https://hgpmart.wordpress.com/wp-content/uploads/2019/07/xpulse.png'); }
+.bg-image-66ae2b { background-image: url('https://images.hindustantimes.com/auto/img/2021/03/05/960x540/home-img_1614919901272_1614919913051.jpg'); }
+.ml-8 { margin-left: 8px; }
+.border-0 { border:0; }
+.bg-gradient-2f4fb6 { background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://mohanahero.in/wp-content/uploads/2023/05/banner-web.jpeg'); }
+.btn-black-inline { display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white); }
+.specs-heading { margin-bottom: 15px; color: var(--primary-red); }
+.home-products {
+            /* Falling grey color is moved to the top *if* image fails to load */
+            background-color: #f4f4f4; 
+            
+            /* Revised: Step back to root, use image, and required opacity overlay. */
+            background-image: linear-gradient(to right, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') !important;
+            background-position: center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            padding-top: 40px; 
+        }
+
+        .product-toggle {
+            display: flex;
+            justify-content: center;
+            background: var(--white);
+            border-radius: 40px;
+            width: max-content;
+            margin: 0 auto 60px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 2px solid var(--white);
+        }
+        
+        .toggle-btn {
+            padding: 12px 35px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--black);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 35px;
+            user-select: none;
+        }
+
+        /* Hide the actual grids by default */
+        .bikes-grid, .scooters-grid {
+            display: none; 
+        }
+
+        /* When the invisible bikes radio is checked, show bikes grid */
+        #show-bikes:checked ~ .bikes-grid {
+            display: grid;
+        }
+
+        /* When the invisible scooters radio is checked, show scooters grid */
+        #show-scooters:checked ~ .scooters-grid {
+            display: grid;
+        }
+
+        /* Style the active label based on which radio is checked */
+        #show-bikes:checked ~ .product-toggle #label-bikes,
+        #show-scooters:checked ~ .product-toggle #label-scooters {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .view-all-link {
+            display: none;
+        }
+
+        #show-bikes:checked ~ .center-action .view-all-bikes {
+            display: inline-block;
+        }
+
+        #show-scooters:checked ~ .center-action .view-all-scooters {
+            display: inline-block;
+        }
+
+        
+        /* Pure CSS Slider */
+        .css-slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .css-slider-container input {
+            display: none;
+        }
+        .css-slides {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .css-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .css-slider-container.autoplay .css-slide.s1 { animation: cssFade1 20s infinite; }
+        .css-slider-container.autoplay .css-slide.s2 { animation: cssFade2 20s infinite; }
+        .css-slider-container.autoplay .css-slide.s3 { animation: cssFade3 20s infinite; }
+        .css-slider-container.autoplay .css-slide.s4 { animation: cssFade4 20s infinite; }
+
+        @keyframes cssFade1 { 0%, 20% { opacity: 1; z-index: 2; } 25%, 95% { opacity: 0; z-index: 1; } 100% { opacity: 1; z-index: 2; } }
+        @keyframes cssFade2 { 0%, 20% { opacity: 0; z-index: 1; } 25%, 45% { opacity: 1; z-index: 2; } 50%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade3 { 0%, 45% { opacity: 0; z-index: 1; } 50%, 70% { opacity: 1; z-index: 2; } 75%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade4 { 0%, 70% { opacity: 0; z-index: 1; } 75%, 95% { opacity: 1; z-index: 2; } 100% { opacity: 0; z-index: 1; } }
+
+        input#s1:checked ~ .css-slides .s1,
+        input#s2:checked ~ .css-slides .s2,
+        input#s3:checked ~ .css-slides .s3,
+        input#s4:checked ~ .css-slides .s4 {
+            opacity: 1;
+            z-index: 3;
+            animation: none;
+        }
+        input#s1:checked ~ .css-slides .css-slide,
+        input#s2:checked ~ .css-slides .css-slide,
+        input#s3:checked ~ .css-slides .css-slide,
+        input#s4:checked ~ .css-slides .css-slide {
+            animation: none;
+        }
+
+        .css-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            z-index: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .css-controls label {
+            pointer-events: auto;
+        }
+
+        .css-slider-container.autoplay .css-controls.c1 { animation: cssCtrl1 20s infinite; }
+        .css-slider-container.autoplay .css-controls.c2 { animation: cssCtrl2 20s infinite; }
+        .css-slider-container.autoplay .css-controls.c3 { animation: cssCtrl3 20s infinite; }
+        .css-slider-container.autoplay .css-controls.c4 { animation: cssCtrl4 20s infinite; }
+
+        @keyframes cssCtrl1 { 0%, 24% { z-index: 20; opacity: 1; } 25%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl2 { 0%, 24% { z-index: 0; opacity: 0; } 25%, 49% { z-index: 20; opacity: 1; } 50%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl3 { 0%, 49% { z-index: 0; opacity: 0; } 50%, 74% { z-index: 20; opacity: 1; } 75%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl4 { 0%, 74% { z-index: 0; opacity: 0; } 75%, 99% { z-index: 20; opacity: 1; } 100% { z-index: 0; opacity: 0; } }
+
+        input#s1:checked ~ .c1,
+        input#s2:checked ~ .c2,
+        input#s3:checked ~ .c3,
+        input#s4:checked ~ .c4 {
+            z-index: 20;
+            opacity: 1;
+            animation: none;
+        }
+        input#s1:checked ~ .css-controls,
+        input#s2:checked ~ .css-controls,
+        input#s3:checked ~ .css-controls,
+        input#s4:checked ~ .css-controls {
+            animation: none;
+        }
+
+        .css-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+        .css-dots label {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .css-slider-container.autoplay .css-dots label.d1 { animation: cssDot1 20s infinite; }
+        .css-slider-container.autoplay .css-dots label.d2 { animation: cssDot2 20s infinite; }
+        .css-slider-container.autoplay .css-dots label.d3 { animation: cssDot3 20s infinite; }
+        .css-slider-container.autoplay .css-dots label.d4 { animation: cssDot4 20s infinite; }
+
+        @keyframes cssDot1 { 0%, 24% { background: var(--primary-red); transform: scale(1.2); } 25%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot2 { 0%, 24% { background: rgba(255,255,255,0.4); transform: scale(1); } 25%, 49% { background: var(--primary-red); transform: scale(1.2); } 50%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot3 { 0%, 49% { background: rgba(255,255,255,0.4); transform: scale(1); } 50%, 74% { background: var(--primary-red); transform: scale(1.2); } 75%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot4 { 0%, 74% { background: rgba(255,255,255,0.4); transform: scale(1); } 75%, 99% { background: var(--primary-red); transform: scale(1.2); } 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+
+        input#s1:checked ~ .css-dots .d1,
+        input#s2:checked ~ .css-dots .d2,
+        input#s3:checked ~ .css-dots .d3,
+        input#s4:checked ~ .css-dots .d4 {
+            background: var(--primary-red);
+            transform: scale(1.2);
+            animation: none;
+        }
+        input#s1:checked ~ .css-dots label,
+        input#s2:checked ~ .css-dots label,
+        input#s3:checked ~ .css-dots label,
+        input#s4:checked ~ .css-dots label {
+            animation: none;
+        }
+.body-flex { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--white); }
+.empty-media-title { font-size: 28px; color: var(--black); margin-bottom: 10px; }
