@@ -356,7 +356,7 @@ a {
     font-weight: 300;
     margin-bottom: 40px;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: var(--white);
 }
 
 .hero-buttons {
@@ -1218,142 +1218,82 @@ body {
         }
 
         
-        /* Pure CSS Slider */
-        .css-slider-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .css-slider-container input {
-            display: none;
-        }
-        .css-slides {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        .css-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0;
-            z-index: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
+                                /* Pure CSS Slider */
+        .css-slider-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .css-slider-container input { display: none; }
+        .css-slides { position: absolute; width: 100%; height: 100%; }
+        .css-slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; z-index: 1; transition: opacity 0.5s ease-in-out; overflow: hidden; }
+        .video-slide iframe { width: 100%; height: 100%; object-fit: cover; pointer-events: none; transform: scale(1.15); }
+        .css-slider-container.autoplay .css-slide.s1 { animation: cssFade1 30s infinite; }
+        .css-slider-container.autoplay .css-slide.s2 { animation: cssFade2 30s infinite; }
+        .css-slider-container.autoplay .css-slide.s3 { animation: cssFade3 30s infinite; }
+        .css-slider-container.autoplay .css-slide.s4 { animation: cssFade4 30s infinite; }
+        .css-slider-container.autoplay .css-slide.s5 { animation: cssFade5 30s infinite; }
+        .css-slider-container.autoplay .css-slide.s6 { animation: cssFade6 30s infinite; }
+        @keyframes cssFade1 { 0%, 15.7% { opacity: 1; z-index: 2; } 16.7%, 84.3% { opacity: 0; z-index: 1; } 100% { opacity: 1; z-index: 2; } }
+        @keyframes cssFade2 { 0%, 15.7% { opacity: 0; z-index: 1; } 16.7%, 32.3% { opacity: 1; z-index: 2; } 33.3%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade3 { 0%, 32.3% { opacity: 0; z-index: 1; } 33.3%, 49.0% { opacity: 1; z-index: 2; } 50.0%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade4 { 0%, 49.0% { opacity: 0; z-index: 1; } 50.0%, 65.7% { opacity: 1; z-index: 2; } 66.7%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade5 { 0%, 65.7% { opacity: 0; z-index: 1; } 66.7%, 82.3% { opacity: 1; z-index: 2; } 83.3%, 100% { opacity: 0; z-index: 1; } }
+        @keyframes cssFade6 { 0%, 82.3% { opacity: 0; z-index: 1; } 83.3%, 99.0% { opacity: 1; z-index: 2; } 100.0%, 100% { opacity: 0; z-index: 1; } }
+        input#s1:checked ~ .css-slides .s1, input#s2:checked ~ .css-slides .s2, input#s3:checked ~ .css-slides .s3, input#s4:checked ~ .css-slides .s4, input#s5:checked ~ .css-slides .s5, input#s6:checked ~ .css-slides .s6 { opacity: 1; z-index: 3; animation: none; }
+        input#s1:checked ~ .css-slides .css-slide, input#s2:checked ~ .css-slides .css-slide, input#s3:checked ~ .css-slides .css-slide, input#s4:checked ~ .css-slides .css-slide, input#s5:checked ~ .css-slides .css-slide, input#s6:checked ~ .css-slides .css-slide { animation: none; }
+        .css-controls { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 40px; z-index: 0; opacity: 0; pointer-events: none; }
+        .css-controls label { pointer-events: auto; }
+        .css-slider-container.autoplay .css-controls.c1 { animation: cssCtrl1 30s infinite; }
+        .css-slider-container.autoplay .css-controls.c2 { animation: cssCtrl2 30s infinite; }
+        .css-slider-container.autoplay .css-controls.c3 { animation: cssCtrl3 30s infinite; }
+        .css-slider-container.autoplay .css-controls.c4 { animation: cssCtrl4 30s infinite; }
+        .css-slider-container.autoplay .css-controls.c5 { animation: cssCtrl5 30s infinite; }
+        .css-slider-container.autoplay .css-controls.c6 { animation: cssCtrl6 30s infinite; }
+        @keyframes cssCtrl1 { 0%, 15.7% { z-index: 20; opacity: 1; } 16.7%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl2 { 0%, 15.7% { z-index: 0; opacity: 0; } 16.7%, 32.3% { z-index: 20; opacity: 1; } 33.3%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl3 { 0%, 32.3% { z-index: 0; opacity: 0; } 33.3%, 49.0% { z-index: 20; opacity: 1; } 50.0%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl4 { 0%, 49.0% { z-index: 0; opacity: 0; } 50.0%, 65.7% { z-index: 20; opacity: 1; } 66.7%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl5 { 0%, 65.7% { z-index: 0; opacity: 0; } 66.7%, 82.3% { z-index: 20; opacity: 1; } 83.3%, 100% { z-index: 0; opacity: 0; } }
+        @keyframes cssCtrl6 { 0%, 82.3% { z-index: 0; opacity: 0; } 83.3%, 99.0% { z-index: 20; opacity: 1; } 100.0%, 100% { z-index: 0; opacity: 0; } }
+        input#s1:checked ~ .c1, input#s2:checked ~ .c2, input#s3:checked ~ .c3, input#s4:checked ~ .c4, input#s5:checked ~ .c5, input#s6:checked ~ .c6 { z-index: 20; opacity: 1; animation: none; }
+        input#s1:checked ~ .css-controls, input#s2:checked ~ .css-controls, input#s3:checked ~ .css-controls, input#s4:checked ~ .css-controls, input#s5:checked ~ .css-controls, input#s6:checked ~ .css-controls { animation: none; }
+        .css-dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 20; }
+        .css-dots label { width: 10px; height: 10px; background-color: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; transition: var(--transition); }
+        .css-slider-container.autoplay .css-dots label.d1 { animation: cssDot1 30s infinite; }
+        .css-slider-container.autoplay .css-dots label.d2 { animation: cssDot2 30s infinite; }
+        .css-slider-container.autoplay .css-dots label.d3 { animation: cssDot3 30s infinite; }
+        .css-slider-container.autoplay .css-dots label.d4 { animation: cssDot4 30s infinite; }
+        .css-slider-container.autoplay .css-dots label.d5 { animation: cssDot5 30s infinite; }
+        .css-slider-container.autoplay .css-dots label.d6 { animation: cssDot6 30s infinite; }
+        @keyframes cssDot1 { 0%, 15.7% { background: var(--primary-red); transform: scale(1.2); } 16.7%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot2 { 0%, 15.7% { background: rgba(255,255,255,0.4); transform: scale(1); } 16.7%, 32.3% { background: var(--primary-red); transform: scale(1.2); } 33.3%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot3 { 0%, 32.3% { background: rgba(255,255,255,0.4); transform: scale(1); } 33.3%, 49.0% { background: var(--primary-red); transform: scale(1.2); } 50.0%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot4 { 0%, 49.0% { background: rgba(255,255,255,0.4); transform: scale(1); } 50.0%, 65.7% { background: var(--primary-red); transform: scale(1.2); } 66.7%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot5 { 0%, 65.7% { background: rgba(255,255,255,0.4); transform: scale(1); } 66.7%, 82.3% { background: var(--primary-red); transform: scale(1.2); } 83.3%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        @keyframes cssDot6 { 0%, 82.3% { background: rgba(255,255,255,0.4); transform: scale(1); } 83.3%, 99.0% { background: var(--primary-red); transform: scale(1.2); } 100.0%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
+        input#s1:checked ~ .css-dots .d1, input#s2:checked ~ .css-dots .d2, input#s3:checked ~ .css-dots .d3, input#s4:checked ~ .css-dots .d4, input#s5:checked ~ .css-dots .d5, input#s6:checked ~ .css-dots .d6 { background: var(--primary-red); transform: scale(1.2); animation: none; }
+        input#s1:checked ~ .css-dots label, input#s2:checked ~ .css-dots label, input#s3:checked ~ .css-dots label, input#s4:checked ~ .css-dots label, input#s5:checked ~ .css-dots label, input#s6:checked ~ .css-dots label { animation: none; }
 
-        .css-slider-container.autoplay .css-slide.s1 { animation: cssFade1 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s2 { animation: cssFade2 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s3 { animation: cssFade3 20s infinite; }
-        .css-slider-container.autoplay .css-slide.s4 { animation: cssFade4 20s infinite; }
+        /* --- HAMBURGER BASE STYLES --- */
+.menu-toggle-checkbox {
+    display: none; /* Hide the actual checkbox */
+}
 
-        @keyframes cssFade1 { 0%, 20% { opacity: 1; z-index: 2; } 25%, 95% { opacity: 0; z-index: 1; } 100% { opacity: 1; z-index: 2; } }
-        @keyframes cssFade2 { 0%, 20% { opacity: 0; z-index: 1; } 25%, 45% { opacity: 1; z-index: 2; } 50%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade3 { 0%, 45% { opacity: 0; z-index: 1; } 50%, 70% { opacity: 1; z-index: 2; } 75%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade4 { 0%, 70% { opacity: 0; z-index: 1; } 75%, 95% { opacity: 1; z-index: 2; } 100% { opacity: 0; z-index: 1; } }
+.hamburger-icon {
+    display: none; /* Hide icon on desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    z-index: 1001; /* Keep above the menu */
+}
 
-        input#s1:checked ~ .css-slides .s1,
-        input#s2:checked ~ .css-slides .s2,
-        input#s3:checked ~ .css-slides .s3,
-        input#s4:checked ~ .css-slides .s4 {
-            opacity: 1;
-            z-index: 3;
-            animation: none;
-        }
-        input#s1:checked ~ .css-slides .css-slide,
-        input#s2:checked ~ .css-slides .css-slide,
-        input#s3:checked ~ .css-slides .css-slide,
-        input#s4:checked ~ .css-slides .css-slide {
-            animation: none;
-        }
+.hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--black);
+    border-radius: 2px;
+    transition: var(--transition);
+}
 
-        .css-controls {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 40px;
-            z-index: 0;
-            opacity: 0;
-            pointer-events: none;
-        }
-        .css-controls label {
-            pointer-events: auto;
-        }
-
-        .css-slider-container.autoplay .css-controls.c1 { animation: cssCtrl1 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c2 { animation: cssCtrl2 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c3 { animation: cssCtrl3 20s infinite; }
-        .css-slider-container.autoplay .css-controls.c4 { animation: cssCtrl4 20s infinite; }
-
-        @keyframes cssCtrl1 { 0%, 24% { z-index: 20; opacity: 1; } 25%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl2 { 0%, 24% { z-index: 0; opacity: 0; } 25%, 49% { z-index: 20; opacity: 1; } 50%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl3 { 0%, 49% { z-index: 0; opacity: 0; } 50%, 74% { z-index: 20; opacity: 1; } 75%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl4 { 0%, 74% { z-index: 0; opacity: 0; } 75%, 99% { z-index: 20; opacity: 1; } 100% { z-index: 0; opacity: 0; } }
-
-        input#s1:checked ~ .c1,
-        input#s2:checked ~ .c2,
-        input#s3:checked ~ .c3,
-        input#s4:checked ~ .c4 {
-            z-index: 20;
-            opacity: 1;
-            animation: none;
-        }
-        input#s1:checked ~ .css-controls,
-        input#s2:checked ~ .css-controls,
-        input#s3:checked ~ .css-controls,
-        input#s4:checked ~ .css-controls {
-            animation: none;
-        }
-
-        .css-dots {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 20;
-        }
-        .css-dots label {
-            width: 10px;
-            height: 10px;
-            background-color: rgba(255,255,255,0.4);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .css-slider-container.autoplay .css-dots label.d1 { animation: cssDot1 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d2 { animation: cssDot2 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d3 { animation: cssDot3 20s infinite; }
-        .css-slider-container.autoplay .css-dots label.d4 { animation: cssDot4 20s infinite; }
-
-        @keyframes cssDot1 { 0%, 24% { background: var(--primary-red); transform: scale(1.2); } 25%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot2 { 0%, 24% { background: rgba(255,255,255,0.4); transform: scale(1); } 25%, 49% { background: var(--primary-red); transform: scale(1.2); } 50%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot3 { 0%, 49% { background: rgba(255,255,255,0.4); transform: scale(1); } 50%, 74% { background: var(--primary-red); transform: scale(1.2); } 75%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot4 { 0%, 74% { background: rgba(255,255,255,0.4); transform: scale(1); } 75%, 99% { background: var(--primary-red); transform: scale(1.2); } 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-
-        input#s1:checked ~ .css-dots .d1,
-        input#s2:checked ~ .css-dots .d2,
-        input#s3:checked ~ .css-dots .d3,
-        input#s4:checked ~ .css-dots .d4 {
-            background: var(--primary-red);
-            transform: scale(1.2);
-            animation: none;
-        }
-        input#s1:checked ~ .css-dots label,
-        input#s2:checked ~ .css-dots label,
-        input#s3:checked ~ .css-dots label,
-        input#s4:checked ~ .css-dots label {
-            animation: none;
-        }
 .body-flex { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--white); }
 .empty-media-title { font-size: 28px; color: var(--black); margin-bottom: 10px; }
 
@@ -1381,17 +1321,96 @@ body {
     }
 }
 
-/* MOBILE PHONES (Max Width: 768px) */
+    /* MOBILE PHONES (Max Width: 768px) */
 @media screen and (max-width: 768px) {
-    .top-bar-content {
-        flex-direction: column;
-        gap: 5px;
+    
+    /* Keep header horizontal, separate logo and hamburger */
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+        height: auto;
     }
 
-    .nav-container {
+    /* Show the hamburger icon */
+    .hamburger-icon {
+        display: flex;
+    }
+
+    /* Center dropdown menu for mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
         flex-direction: column;
-        height: auto;
-        padding: 5px 0;
+        align-items: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-top: 3px solid var(--primary-red);
+        gap: 25px !important;
+        z-index: 1000;
+    }
+
+    /* THE MAGIC: When checkbox is checked, show the menu */
+    .menu-toggle-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Optional: Animate the hamburger into an 'X' when checked */
+    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav-links > li {
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 10px 0;
+    }
+
+    .dropdown-menu a {
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        padding: 10px 0 !important;
+    }
+
+    .nav-links > li:not(:last-child)::after {
+        display: none;
+    }
+
+    /* Make dropdown menus flow naturally on mobile instead of hovering */
+    .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+        border: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none; /* You can change to block if you want them always open on mobile */
+    }
+    
+    .nav-links li:hover .dropdown-menu {
+        display: block;
+    }
+
+
+    .top-bar-content {
+        flex-direction: column;
         gap: 5px;
     }
 
@@ -1422,8 +1441,11 @@ body {
         font-size: 16px;
     }
 
-    .slider-arrows {
-        display: none;
+    .css-controls {
+        top: auto;
+        bottom: 10px;
+        transform: none;
+        padding: 0 20px;
     }
 
     .section-padding,
@@ -1506,7 +1528,7 @@ body {
     .floating-booking {
         /* Move closer to the screen edges */
         bottom: 15px;
-        left: 15px;
+        right: 15px;
         
         /* Remove the white background container to make it a pure circle */
         background: transparent;
@@ -1525,4 +1547,35 @@ body {
         font-size: 24px;
         box-shadow: 0 5px 15px rgba(227, 24, 55, 0.4); /* Apply shadow directly to the icon */
     }
+
+    .modal-content {
+       width: 380px;
+        font-size: 12px; 
+        right: px;
+    }
+}
+
+/* Media Grid for Ads/Videos */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.media-item {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #000;
+}
+.media-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }

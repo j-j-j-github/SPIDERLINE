@@ -9,8 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-
-    </style>
+    <link rel="icon" type="image/png" href="media/herofavicon.png">
 </head>
 
 <body>
@@ -22,6 +21,13 @@
             </a>
 
             <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -55,20 +61,22 @@
 
     <section class="hero-slider" id="heroSlider">
         <div class="css-slider-container autoplay">
-            <input type="radio" name="slider" id="s1">
-            <input type="radio" name="slider" id="s2">
-            <input type="radio" name="slider" id="s3">
-            <input type="radio" name="slider" id="s4">
-
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2" >
+            <input type="radio" name="slider" id="s3" >
+            <input type="radio" name="slider" id="s4" >
+            <input type="radio" name="slider" id="s5" >
+            <input type="radio" name="slider" id="s6" >
             <div class="css-slides">
                 <div class="css-slide s1 bg-image-86284b"></div>
-                <div class="css-slide s2 bg-image-3c4152"></div>
-                <div class="css-slide s3 bg-image-66ae2b"></div>
-                <div class="css-slide s4 bg-image-e206a8"></div>
+                <div class="css-slide s2 video-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/SDTZ9I2JzIc?autoplay=1&mute=1&loop=1&playlist=SDTZ9I2JzIc&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="css-slide s3 video-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1XdWK_v2uns?autoplay=1&mute=1&loop=1&playlist=1XdWK_v2uns&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="css-slide s4 video-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8a4N2nSN32o?autoplay=1&mute=1&loop=1&playlist=8a4N2nSN32o&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="css-slide s5 video-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/RkNTA0i9Xh0?autoplay=1&mute=1&loop=1&playlist=RkNTA0i9Xh0&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="css-slide s6 video-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/HcQpfpQImaE?autoplay=1&mute=1&loop=1&playlist=HcQpfpQImaE&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
-
             <div class="css-controls c1">
-                <label for="s4" class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></label>
+                <label for="s6" class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></label>
                 <label for="s2" class="arrow next-arrow"><i class="fas fa-chevron-right"></i></label>
             </div>
             <div class="css-controls c2">
@@ -81,18 +89,29 @@
             </div>
             <div class="css-controls c4">
                 <label for="s3" class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></label>
+                <label for="s5" class="arrow next-arrow"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="css-controls c5">
+                <label for="s4" class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></label>
+                <label for="s6" class="arrow next-arrow"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="css-controls c6">
+                <label for="s5" class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></label>
                 <label for="s1" class="arrow next-arrow"><i class="fas fa-chevron-right"></i></label>
             </div>
-
             <div class="css-dots">
                 <label for="s1" class="d1"></label>
                 <label for="s2" class="d2"></label>
                 <label for="s3" class="d3"></label>
                 <label for="s4" class="d4"></label>
+                <label for="s5" class="d5"></label>
+                <label for="s6" class="d6"></label>
             </div>
         </div>
-
         <div class="hero-overlay"></div>
+
+
+
         <div class="container hero-content">
             <h1>Experience the Thrill<br>of the Ride</h1>
             <p>Welcome to Diya Hero. Discover our latest range of motorcycles and scooters with unmatched performance

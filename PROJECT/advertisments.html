@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="media/herofavicon.png">
 </head>
 <body class="body-flex">
 
@@ -19,7 +20,15 @@
             </a>
 
             <nav class="navbar">
-                <ul class="nav-links">
+                
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+<ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" >About Us</a></li>
                     
@@ -59,11 +68,25 @@
         </div>
     </div>
 
-    <section class="empty-media-section section-padding empty-media-flex">
+    <section class="media-section section-padding">
         <div class="container">
-            <i class="fas fa-photo-video empty-media-icon"></i>
-            <h2 class="empty-media-title">No Media to Show</h2>
-            <p class="empty-media-desc">Check back later for new updates!</p>
+            <div class="media-grid">
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/SDTZ9I2JzIc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/1XdWK_v2uns" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/8a4N2nSN32o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/RkNTA0i9Xh0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/HcQpfpQImaE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
