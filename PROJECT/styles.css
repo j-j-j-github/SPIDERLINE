@@ -16,14 +16,16 @@
 }
 
 .nav-links {
-    gap: 20px !important; 
+    gap: 20px !important;
 }
-.nav-links > li {
+
+.nav-links>li {
     position: relative;
     padding-right: 20px;
 }
+
 /* Draws the vertical line on all items EXCEPT the last one */
-.nav-links > li:not(:last-child)::after {
+.nav-links>li:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -35,7 +37,7 @@
 }
 
 .hero-content h1 {
-    font-size: 46px ;
+    font-size: 46px;
 }
 
 body {
@@ -93,7 +95,7 @@ a {
 .header {
     background-color: var(--white);
     border-top: 3px solid var(--primary-red);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -171,7 +173,7 @@ a {
 .about-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: block;
 }
 
@@ -186,14 +188,14 @@ a {
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     text-align: center;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .product-img-wrap {
@@ -413,8 +415,8 @@ a {
     pointer-events: auto;
     width: 50px;
     height: 50px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     color: var(--white);
     font-size: 20px;
@@ -443,13 +445,14 @@ a {
 .dot {
     width: 10px;
     height: 10px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.dot.active, .dot:hover {
+.dot.active,
+.dot:hover {
     background-color: var(--primary-red);
     transform: scale(1.2);
 }
@@ -475,7 +478,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
@@ -492,7 +495,7 @@ a {
     align-items: center;
     background: var(--white);
     border-radius: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     overflow: hidden;
     transition: var(--transition);
@@ -521,7 +524,7 @@ a {
     justify-content: center;
     font-size: 20px;
     border-radius: 50%;
-    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .bottom-footer {
@@ -562,7 +565,7 @@ a {
     background: var(--light-grey);
     padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .about-content h2 {
@@ -605,7 +608,7 @@ a {
     top: 100%;
     left: 0;
     background-color: var(--white);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     list-style: none;
     min-width: 220px;
     opacity: 0;
@@ -633,7 +636,7 @@ a {
     color: var(--dark-grey) !important;
     text-transform: capitalize !important;
     font-weight: 500 !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
@@ -652,7 +655,7 @@ a {
 }
 
 /* Contact Page Specific Styles */
-        
+
 .page-header {
     background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('media/bikes.jpg') center/cover;
     padding: 80px 0;
@@ -678,7 +681,7 @@ a {
     background: var(--white);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .contact-heading {
@@ -715,7 +718,7 @@ a {
 
 .info-card:hover {
     background: var(--white);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     border-left-color: var(--primary-red);
 }
 
@@ -811,11 +814,11 @@ body {
 }
 
 .bottom-footer {
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 /* CSS SERVICE BOOKING MODAL*/
-   .modal-overlay {
+.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -855,10 +858,10 @@ body {
     position: relative;
     transform: translateY(50px) scale(0.95);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     max-height: 90vh;
     overflow-y: auto;
-    z-index: 10; 
+    z-index: 10;
 }
 
 
@@ -966,7 +969,7 @@ body {
 }
 
 /* BRANCHES / SHOWROOMS PAGE */
-   .branches-section {
+.branches-section {
     padding: 80px 0;
     background-color: var(--light-grey);
 }
@@ -981,19 +984,19 @@ body {
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     position: relative;
-    display: flex;             
-    flex-direction: column;    
+    display: flex;
+    flex-direction: column;
 }
 
 
 .branch-info {
     padding: 35px;
-    display: flex;            
-    flex-direction: column;    
-    flex-grow: 1;             
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 
@@ -1003,20 +1006,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 25px;       
+    margin-bottom: 25px;
 }
 
 .branch-map {
-    margin-top: auto;          
+    margin-top: auto;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    line-height: 0; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    line-height: 0;
 }
 
 .branch-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .branch-image {
@@ -1049,7 +1052,7 @@ body {
     font-weight: 700;
     letter-spacing: 1px;
     border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .branch-info h3 {
@@ -1100,189 +1103,894 @@ body {
 .dept-numbers {
     color: #666;
     font-size: 15px;
-    padding-left: 30px; 
-    font-family: monospace; 
+    padding-left: 30px;
+    font-family: monospace;
     font-size: 16px;
 }
 
 /* xoom_zx.html specific styles */
-.product-detail-section { padding: 80px 0; background-color: var(--white); }
-.product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-.product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
-.product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
-.product-info-container { flex: 1; min-width: 300px; }
-.product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
-.product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
-.specs-list { list-style: none; margin-bottom: 30px; }
-.specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
-.specs-list li strong { color: var(--black); }
-.specs-list li span { color: #666; font-weight: 500; }
-.specs-heading { margin-bottom: 15px; color: var(--primary-red); }
-.btn-black-inline { display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white); }
-.btn-inline { display:inline-block; }
+.product-detail-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.product-detail-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: var(--light-grey);
+    border-radius: 8px;
+}
+
+.product-image-container img {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.product-info-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info-container h2 {
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.product-info-container p.desc {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.specs-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.specs-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specs-list li strong {
+    color: var(--black);
+}
+
+.specs-list li span {
+    color: #666;
+    font-weight: 500;
+}
+
+.specs-heading {
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
+.btn-black-inline {
+    display: inline-block;
+    margin-right: 15px;
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    color: var(--white);
+}
+
+.btn-inline {
+    display: inline-block;
+}
 
 
 /* Extracted styles */
-.empty-media-flex { text-align: center; min-height: 40vh; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: var(--white); }
-.bg-image-86284b { background-image: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg'); }
-.bg-image-e206a8 { background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Flarge%2Fhero%2Fxpulse-200t-4v%2Fhero-xpulse-200t-4v.jpg%3Fv%3D6&w=1920&q=80'); }
-.product-detail-section { padding: 80px 0; background-color: var(--white); }
-        .product-detail-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-        .product-image-container { flex: 1; min-width: 300px; text-align: center; padding: 20px; background: var(--light-grey); border-radius: 8px; }
-        .product-image-container img { max-width: 100%; height: auto; mix-blend-mode: multiply; }
-        .product-info-container { flex: 1; min-width: 300px; }
-        .product-info-container h2 { font-size: 36px; color: var(--black); margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
-        .product-info-container p.desc { color: #555; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
-        .specs-list { list-style: none; margin-bottom: 30px; }
-        .specs-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
-        .specs-list li strong { color: var(--black); }
-        .specs-list li span { color: #666; font-weight: 500; }
-.btn-inline { display:inline-block; }
-.empty-media-icon { font-size: 60px; color: #ccc; margin-bottom: 20px; }
-.empty-media-desc { color: #777; font-size: 16px; }
-.bg-image-3c4152 { background-image: url('https://hgpmart.wordpress.com/wp-content/uploads/2019/07/xpulse.png'); }
-.bg-image-66ae2b { background-image: url('https://images.hindustantimes.com/auto/img/2021/03/05/960x540/home-img_1614919901272_1614919913051.jpg'); }
-.ml-8 { margin-left: 8px; }
-.border-0 { border:0; }
-.bg-gradient-2f4fb6 { background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://mohanahero.in/wp-content/uploads/2023/05/banner-web.jpeg'); }
-.btn-black-inline { display:inline-block; margin-right: 15px; background-color: var(--black); border: 2px solid var(--black); color: var(--white); }
-.specs-heading { margin-bottom: 15px; color: var(--primary-red); }
+.empty-media-flex {
+    text-align: center;
+    min-height: 40vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.bg-image-86284b {
+    background-image: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg');
+}
+
+.bg-image-e206a8 {
+    background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Flarge%2Fhero%2Fxpulse-200t-4v%2Fhero-xpulse-200t-4v.jpg%3Fv%3D6&w=1920&q=80');
+}
+
+.product-detail-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.product-detail-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: var(--light-grey);
+    border-radius: 8px;
+}
+
+.product-image-container img {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.product-info-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info-container h2 {
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.product-info-container p.desc {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.specs-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.specs-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specs-list li strong {
+    color: var(--black);
+}
+
+.specs-list li span {
+    color: #666;
+    font-weight: 500;
+}
+
+.btn-inline {
+    display: inline-block;
+}
+
+.empty-media-icon {
+    font-size: 60px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.empty-media-desc {
+    color: #777;
+    font-size: 16px;
+}
+
+.bg-image-3c4152 {
+    background-image: url('https://hgpmart.wordpress.com/wp-content/uploads/2019/07/xpulse.png');
+}
+
+.bg-image-66ae2b {
+    background-image: url('https://images.hindustantimes.com/auto/img/2021/03/05/960x540/home-img_1614919901272_1614919913051.jpg');
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+.border-0 {
+    border: 0;
+}
+
+.bg-gradient-2f4fb6 {
+    background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://mohanahero.in/wp-content/uploads/2023/05/banner-web.jpeg');
+}
+
+.btn-black-inline {
+    display: inline-block;
+    margin-right: 15px;
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    color: var(--white);
+}
+
+.specs-heading {
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
 .home-products {
-            /* Falling grey color is moved to the top *if* image fails to load */
-            background-color: #f4f4f4; 
-            
-            /* Revised: Step back to root, use image, and required opacity overlay. */
-            background-image: linear-gradient(to right, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') !important;
-            background-position: center !important;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            padding-top: 40px; 
-        }
+    /* Falling grey color is moved to the top *if* image fails to load */
+    background-color: #f4f4f4;
 
-        .product-toggle {
-            display: flex;
-            justify-content: center;
-            background: var(--white);
-            border-radius: 40px;
-            width: max-content;
-            margin: 0 auto 60px auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-            border: 2px solid var(--white);
-        }
-        
-        .toggle-btn {
-            padding: 12px 35px;
-            font-size: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--black);
-            cursor: pointer;
-            transition: var(--transition);
-            border-radius: 35px;
-            user-select: none;
-        }
+    /* Revised: Step back to root, use image, and required opacity overlay. */
+    background-image: linear-gradient(to right, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('media/optionsbg.jpg') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding-top: 40px;
+}
 
-        /* Hide the actual grids by default */
-        .bikes-grid, .scooters-grid {
-            display: none; 
-        }
+.product-toggle {
+    display: flex;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 40px;
+    width: max-content;
+    margin: 0 auto 60px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 2px solid var(--white);
+}
 
-        /* When the invisible bikes radio is checked, show bikes grid */
-        #show-bikes:checked ~ .bikes-grid {
-            display: grid;
-        }
+.toggle-btn {
+    padding: 12px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 35px;
+    user-select: none;
+}
 
-        /* When the invisible scooters radio is checked, show scooters grid */
-        #show-scooters:checked ~ .scooters-grid {
-            display: grid;
-        }
+/* Hide the actual grids by default */
+.bikes-grid,
+.scooters-grid {
+    display: none;
+}
 
-        /* Style the active label based on which radio is checked */
-        #show-bikes:checked ~ .product-toggle #label-bikes,
-        #show-scooters:checked ~ .product-toggle #label-scooters {
-            background: var(--primary-red);
-            color: var(--white);
-        }
+/* When the invisible bikes radio is checked, show bikes grid */
+#show-bikes:checked~.bikes-grid {
+    display: grid;
+}
 
-        .view-all-link {
-            display: none;
-        }
+/* When the invisible scooters radio is checked, show scooters grid */
+#show-scooters:checked~.scooters-grid {
+    display: grid;
+}
 
-        #show-bikes:checked ~ .center-action .view-all-bikes {
-            display: inline-block;
-        }
+/* Style the active label based on which radio is checked */
+#show-bikes:checked~.product-toggle #label-bikes,
+#show-scooters:checked~.product-toggle #label-scooters {
+    background: var(--primary-red);
+    color: var(--white);
+}
 
-        #show-scooters:checked ~ .center-action .view-all-scooters {
-            display: inline-block;
-        }
+.view-all-link {
+    display: none;
+}
 
-        
-                                /* Pure CSS Slider */
-        .css-slider-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .css-slider-container input { display: none; }
-        .css-slides { position: absolute; width: 100%; height: 100%; }
-        .css-slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; z-index: 1; transition: opacity 0.5s ease-in-out; overflow: hidden; }
-        .video-slide iframe { width: 100%; height: 100%; object-fit: cover; pointer-events: none; transform: scale(1.15); }
-        .css-slider-container.autoplay .css-slide.s1 { animation: cssFade1 30s infinite; }
-        .css-slider-container.autoplay .css-slide.s2 { animation: cssFade2 30s infinite; }
-        .css-slider-container.autoplay .css-slide.s3 { animation: cssFade3 30s infinite; }
-        .css-slider-container.autoplay .css-slide.s4 { animation: cssFade4 30s infinite; }
-        .css-slider-container.autoplay .css-slide.s5 { animation: cssFade5 30s infinite; }
-        .css-slider-container.autoplay .css-slide.s6 { animation: cssFade6 30s infinite; }
-        @keyframes cssFade1 { 0%, 15.7% { opacity: 1; z-index: 2; } 16.7%, 84.3% { opacity: 0; z-index: 1; } 100% { opacity: 1; z-index: 2; } }
-        @keyframes cssFade2 { 0%, 15.7% { opacity: 0; z-index: 1; } 16.7%, 32.3% { opacity: 1; z-index: 2; } 33.3%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade3 { 0%, 32.3% { opacity: 0; z-index: 1; } 33.3%, 49.0% { opacity: 1; z-index: 2; } 50.0%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade4 { 0%, 49.0% { opacity: 0; z-index: 1; } 50.0%, 65.7% { opacity: 1; z-index: 2; } 66.7%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade5 { 0%, 65.7% { opacity: 0; z-index: 1; } 66.7%, 82.3% { opacity: 1; z-index: 2; } 83.3%, 100% { opacity: 0; z-index: 1; } }
-        @keyframes cssFade6 { 0%, 82.3% { opacity: 0; z-index: 1; } 83.3%, 99.0% { opacity: 1; z-index: 2; } 100.0%, 100% { opacity: 0; z-index: 1; } }
-        input#s1:checked ~ .css-slides .s1, input#s2:checked ~ .css-slides .s2, input#s3:checked ~ .css-slides .s3, input#s4:checked ~ .css-slides .s4, input#s5:checked ~ .css-slides .s5, input#s6:checked ~ .css-slides .s6 { opacity: 1; z-index: 3; animation: none; }
-        input#s1:checked ~ .css-slides .css-slide, input#s2:checked ~ .css-slides .css-slide, input#s3:checked ~ .css-slides .css-slide, input#s4:checked ~ .css-slides .css-slide, input#s5:checked ~ .css-slides .css-slide, input#s6:checked ~ .css-slides .css-slide { animation: none; }
-        .css-controls { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 40px; z-index: 0; opacity: 0; pointer-events: none; }
-        .css-controls label { pointer-events: auto; }
-        .css-slider-container.autoplay .css-controls.c1 { animation: cssCtrl1 30s infinite; }
-        .css-slider-container.autoplay .css-controls.c2 { animation: cssCtrl2 30s infinite; }
-        .css-slider-container.autoplay .css-controls.c3 { animation: cssCtrl3 30s infinite; }
-        .css-slider-container.autoplay .css-controls.c4 { animation: cssCtrl4 30s infinite; }
-        .css-slider-container.autoplay .css-controls.c5 { animation: cssCtrl5 30s infinite; }
-        .css-slider-container.autoplay .css-controls.c6 { animation: cssCtrl6 30s infinite; }
-        @keyframes cssCtrl1 { 0%, 15.7% { z-index: 20; opacity: 1; } 16.7%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl2 { 0%, 15.7% { z-index: 0; opacity: 0; } 16.7%, 32.3% { z-index: 20; opacity: 1; } 33.3%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl3 { 0%, 32.3% { z-index: 0; opacity: 0; } 33.3%, 49.0% { z-index: 20; opacity: 1; } 50.0%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl4 { 0%, 49.0% { z-index: 0; opacity: 0; } 50.0%, 65.7% { z-index: 20; opacity: 1; } 66.7%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl5 { 0%, 65.7% { z-index: 0; opacity: 0; } 66.7%, 82.3% { z-index: 20; opacity: 1; } 83.3%, 100% { z-index: 0; opacity: 0; } }
-        @keyframes cssCtrl6 { 0%, 82.3% { z-index: 0; opacity: 0; } 83.3%, 99.0% { z-index: 20; opacity: 1; } 100.0%, 100% { z-index: 0; opacity: 0; } }
-        input#s1:checked ~ .c1, input#s2:checked ~ .c2, input#s3:checked ~ .c3, input#s4:checked ~ .c4, input#s5:checked ~ .c5, input#s6:checked ~ .c6 { z-index: 20; opacity: 1; animation: none; }
-        input#s1:checked ~ .css-controls, input#s2:checked ~ .css-controls, input#s3:checked ~ .css-controls, input#s4:checked ~ .css-controls, input#s5:checked ~ .css-controls, input#s6:checked ~ .css-controls { animation: none; }
-        .css-dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 20; }
-        .css-dots label { width: 10px; height: 10px; background-color: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; transition: var(--transition); }
-        .css-slider-container.autoplay .css-dots label.d1 { animation: cssDot1 30s infinite; }
-        .css-slider-container.autoplay .css-dots label.d2 { animation: cssDot2 30s infinite; }
-        .css-slider-container.autoplay .css-dots label.d3 { animation: cssDot3 30s infinite; }
-        .css-slider-container.autoplay .css-dots label.d4 { animation: cssDot4 30s infinite; }
-        .css-slider-container.autoplay .css-dots label.d5 { animation: cssDot5 30s infinite; }
-        .css-slider-container.autoplay .css-dots label.d6 { animation: cssDot6 30s infinite; }
-        @keyframes cssDot1 { 0%, 15.7% { background: var(--primary-red); transform: scale(1.2); } 16.7%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot2 { 0%, 15.7% { background: rgba(255,255,255,0.4); transform: scale(1); } 16.7%, 32.3% { background: var(--primary-red); transform: scale(1.2); } 33.3%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot3 { 0%, 32.3% { background: rgba(255,255,255,0.4); transform: scale(1); } 33.3%, 49.0% { background: var(--primary-red); transform: scale(1.2); } 50.0%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot4 { 0%, 49.0% { background: rgba(255,255,255,0.4); transform: scale(1); } 50.0%, 65.7% { background: var(--primary-red); transform: scale(1.2); } 66.7%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot5 { 0%, 65.7% { background: rgba(255,255,255,0.4); transform: scale(1); } 66.7%, 82.3% { background: var(--primary-red); transform: scale(1.2); } 83.3%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        @keyframes cssDot6 { 0%, 82.3% { background: rgba(255,255,255,0.4); transform: scale(1); } 83.3%, 99.0% { background: var(--primary-red); transform: scale(1.2); } 100.0%, 100% { background: rgba(255,255,255,0.4); transform: scale(1); } }
-        input#s1:checked ~ .css-dots .d1, input#s2:checked ~ .css-dots .d2, input#s3:checked ~ .css-dots .d3, input#s4:checked ~ .css-dots .d4, input#s5:checked ~ .css-dots .d5, input#s6:checked ~ .css-dots .d6 { background: var(--primary-red); transform: scale(1.2); animation: none; }
-        input#s1:checked ~ .css-dots label, input#s2:checked ~ .css-dots label, input#s3:checked ~ .css-dots label, input#s4:checked ~ .css-dots label, input#s5:checked ~ .css-dots label, input#s6:checked ~ .css-dots label { animation: none; }
+#show-bikes:checked~.center-action .view-all-bikes {
+    display: inline-block;
+}
 
-        /* --- HAMBURGER BASE STYLES --- */
+#show-scooters:checked~.center-action .view-all-scooters {
+    display: inline-block;
+}
+
+
+/* Pure CSS Slider */
+.css-slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.css-slider-container input {
+    display: none;
+}
+
+.css-slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.css-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.video-slide iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(1.15);
+}
+
+.css-slider-container.autoplay .css-slide.s1 {
+    animation: cssFade1 30s infinite;
+}
+
+.css-slider-container.autoplay .css-slide.s2 {
+    animation: cssFade2 30s infinite;
+}
+
+.css-slider-container.autoplay .css-slide.s3 {
+    animation: cssFade3 30s infinite;
+}
+
+.css-slider-container.autoplay .css-slide.s4 {
+    animation: cssFade4 30s infinite;
+}
+
+.css-slider-container.autoplay .css-slide.s5 {
+    animation: cssFade5 30s infinite;
+}
+
+.css-slider-container.autoplay .css-slide.s6 {
+    animation: cssFade6 30s infinite;
+}
+
+@keyframes cssFade1 {
+
+    0%,
+    15.7% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    16.7%,
+    84.3% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes cssFade2 {
+
+    0%,
+    15.7% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    16.7%,
+    32.3% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    33.3%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes cssFade3 {
+
+    0%,
+    32.3% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    33.3%,
+    49.0% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    50.0%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes cssFade4 {
+
+    0%,
+    49.0% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50.0%,
+    65.7% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    66.7%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes cssFade5 {
+
+    0%,
+    65.7% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    66.7%,
+    82.3% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    83.3%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes cssFade6 {
+
+    0%,
+    82.3% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    83.3%,
+    99.0% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    100.0%,
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+input#s1:checked~.css-slides .s1,
+input#s2:checked~.css-slides .s2,
+input#s3:checked~.css-slides .s3,
+input#s4:checked~.css-slides .s4,
+input#s5:checked~.css-slides .s5,
+input#s6:checked~.css-slides .s6 {
+    opacity: 1;
+    z-index: 3;
+    animation: none;
+}
+
+input#s1:checked~.css-slides .css-slide,
+input#s2:checked~.css-slides .css-slide,
+input#s3:checked~.css-slides .css-slide,
+input#s4:checked~.css-slides .css-slide,
+input#s5:checked~.css-slides .css-slide,
+input#s6:checked~.css-slides .css-slide {
+    animation: none;
+}
+
+.css-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.css-controls label {
+    pointer-events: auto;
+}
+
+.css-slider-container.autoplay .css-controls.c1 {
+    animation: cssCtrl1 30s infinite;
+}
+
+.css-slider-container.autoplay .css-controls.c2 {
+    animation: cssCtrl2 30s infinite;
+}
+
+.css-slider-container.autoplay .css-controls.c3 {
+    animation: cssCtrl3 30s infinite;
+}
+
+.css-slider-container.autoplay .css-controls.c4 {
+    animation: cssCtrl4 30s infinite;
+}
+
+.css-slider-container.autoplay .css-controls.c5 {
+    animation: cssCtrl5 30s infinite;
+}
+
+.css-slider-container.autoplay .css-controls.c6 {
+    animation: cssCtrl6 30s infinite;
+}
+
+@keyframes cssCtrl1 {
+
+    0%,
+    15.7% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    16.7%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes cssCtrl2 {
+
+    0%,
+    15.7% {
+        z-index: 0;
+        opacity: 0;
+    }
+
+    16.7%,
+    32.3% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    33.3%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes cssCtrl3 {
+
+    0%,
+    32.3% {
+        z-index: 0;
+        opacity: 0;
+    }
+
+    33.3%,
+    49.0% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    50.0%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes cssCtrl4 {
+
+    0%,
+    49.0% {
+        z-index: 0;
+        opacity: 0;
+    }
+
+    50.0%,
+    65.7% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    66.7%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes cssCtrl5 {
+
+    0%,
+    65.7% {
+        z-index: 0;
+        opacity: 0;
+    }
+
+    66.7%,
+    82.3% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    83.3%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes cssCtrl6 {
+
+    0%,
+    82.3% {
+        z-index: 0;
+        opacity: 0;
+    }
+
+    83.3%,
+    99.0% {
+        z-index: 20;
+        opacity: 1;
+    }
+
+    100.0%,
+    100% {
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+input#s1:checked~.c1,
+input#s2:checked~.c2,
+input#s3:checked~.c3,
+input#s4:checked~.c4,
+input#s5:checked~.c5,
+input#s6:checked~.c6 {
+    z-index: 20;
+    opacity: 1;
+    animation: none;
+}
+
+input#s1:checked~.css-controls,
+input#s2:checked~.css-controls,
+input#s3:checked~.css-controls,
+input#s4:checked~.css-controls,
+input#s5:checked~.css-controls,
+input#s6:checked~.css-controls {
+    animation: none;
+}
+
+.css-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.css-dots label {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.css-slider-container.autoplay .css-dots label.d1 {
+    animation: cssDot1 30s infinite;
+}
+
+.css-slider-container.autoplay .css-dots label.d2 {
+    animation: cssDot2 30s infinite;
+}
+
+.css-slider-container.autoplay .css-dots label.d3 {
+    animation: cssDot3 30s infinite;
+}
+
+.css-slider-container.autoplay .css-dots label.d4 {
+    animation: cssDot4 30s infinite;
+}
+
+.css-slider-container.autoplay .css-dots label.d5 {
+    animation: cssDot5 30s infinite;
+}
+
+.css-slider-container.autoplay .css-dots label.d6 {
+    animation: cssDot6 30s infinite;
+}
+
+@keyframes cssDot1 {
+
+    0%,
+    15.7% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    16.7%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes cssDot2 {
+
+    0%,
+    15.7% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    16.7%,
+    32.3% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    33.3%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes cssDot3 {
+
+    0%,
+    32.3% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    33.3%,
+    49.0% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    50.0%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes cssDot4 {
+
+    0%,
+    49.0% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    50.0%,
+    65.7% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    66.7%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes cssDot5 {
+
+    0%,
+    65.7% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    66.7%,
+    82.3% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    83.3%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes cssDot6 {
+
+    0%,
+    82.3% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+
+    83.3%,
+    99.0% {
+        background: var(--primary-red);
+        transform: scale(1.2);
+    }
+
+    100.0%,
+    100% {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1);
+    }
+}
+
+input#s1:checked~.css-dots .d1,
+input#s2:checked~.css-dots .d2,
+input#s3:checked~.css-dots .d3,
+input#s4:checked~.css-dots .d4,
+input#s5:checked~.css-dots .d5,
+input#s6:checked~.css-dots .d6 {
+    background: var(--primary-red);
+    transform: scale(1.2);
+    animation: none;
+}
+
+input#s1:checked~.css-dots label,
+input#s2:checked~.css-dots label,
+input#s3:checked~.css-dots label,
+input#s4:checked~.css-dots label,
+input#s5:checked~.css-dots label,
+input#s6:checked~.css-dots label {
+    animation: none;
+}
+
+/* --- HAMBURGER BASE STYLES --- */
 .menu-toggle-checkbox {
-    display: none; /* Hide the actual checkbox */
+    display: none;
+    /* Hide the actual checkbox */
 }
 
 .hamburger-icon {
-    display: none; /* Hide icon on desktop */
+    display: none;
+    /* Hide icon on desktop */
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
     position: relative;
-    z-index: 1001; /* Keep above the menu */
+    z-index: 1001;
+    /* Keep above the menu */
 }
 
 .hamburger-icon span {
@@ -1294,11 +2002,22 @@ body {
     transition: var(--transition);
 }
 
-.body-flex { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--white); }
-.empty-media-title { font-size: 28px; color: var(--black); margin-bottom: 10px; }
+.body-flex {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+.empty-media-title {
+    font-size: 28px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
 
 /* TABLETS & SMALL LAPTOPS (Max Width: 991px) */
 @media screen and (max-width: 991px) {
+
     .about-flex,
     .product-detail-flex {
         flex-direction: column;
@@ -1315,15 +2034,15 @@ body {
     .hero-content h1 {
         font-size: 42px;
     }
-    
+
     .page-header {
         padding: 100px 0;
     }
 }
 
-    /* MOBILE PHONES (Max Width: 768px) */
+/* MOBILE PHONES (Max Width: 768px) */
 @media screen and (max-width: 768px) {
-    
+
     /* Keep header horizontal, separate logo and hamburger */
     .nav-container {
         flex-direction: row;
@@ -1348,29 +2067,31 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 40px 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         border-top: 3px solid var(--primary-red);
         gap: 25px !important;
         z-index: 1000;
     }
 
     /* THE MAGIC: When checkbox is checked, show the menu */
-    .menu-toggle-checkbox:checked ~ .nav-links {
+    .menu-toggle-checkbox:checked~.nav-links {
         display: flex;
     }
 
     /* Optional: Animate the hamburger into an 'X' when checked */
-    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(1) {
+    .menu-toggle-checkbox:checked~.hamburger-icon span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
-    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(2) {
+
+    .menu-toggle-checkbox:checked~.hamburger-icon span:nth-child(2) {
         opacity: 0;
     }
-    .menu-toggle-checkbox:checked ~ .hamburger-icon span:nth-child(3) {
+
+    .menu-toggle-checkbox:checked~.hamburger-icon span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    .nav-links > li {
+    .nav-links>li {
         padding-right: 0;
         width: 100%;
         text-align: center;
@@ -1389,7 +2110,7 @@ body {
         padding: 10px 0 !important;
     }
 
-    .nav-links > li:not(:last-child)::after {
+    .nav-links>li:not(:last-child)::after {
         display: none;
     }
 
@@ -1401,9 +2122,10 @@ body {
         opacity: 1;
         visibility: visible;
         transform: none;
-        display: none; /* You can change to block if you want them always open on mobile */
+        display: none;
+        /* You can change to block if you want them always open on mobile */
     }
-    
+
     .nav-links li:hover .dropdown-menu {
         display: block;
     }
@@ -1420,17 +2142,21 @@ body {
         gap: 5px !important;
     }
 
-    .nav-links > li {
+    .nav-links>li {
         padding-right: 0;
     }
 
-    .nav-links > li:not(:last-child)::after {
+    .nav-links>li:not(:last-child)::after {
         display: none;
     }
 
     .hero-slider {
         min-height: 500px;
         height: 60vh;
+    }
+
+    .video-slide iframe {
+        transform: scale(3.5);
     }
 
     .hero-content h1 {
@@ -1494,9 +2220,9 @@ body {
         bottom: 15px;
         right: 15px;
     }
-    
+
     .booking-text {
-        display: none; 
+        display: none;
     }
 }
 
@@ -1529,7 +2255,7 @@ body {
         /* Move closer to the screen edges */
         bottom: 15px;
         right: 15px;
-        
+
         /* Remove the white background container to make it a pure circle */
         background: transparent;
         box-shadow: none;
@@ -1545,37 +2271,13 @@ body {
         width: 55px;
         height: 55px;
         font-size: 24px;
-        box-shadow: 0 5px 15px rgba(227, 24, 55, 0.4); /* Apply shadow directly to the icon */
+        box-shadow: 0 5px 15px rgba(227, 24, 55, 0.4);
+        /* Apply shadow directly to the icon */
     }
 
     .modal-content {
-       width: 380px;
-        font-size: 12px; 
+        width: 380px;
+        font-size: 12px;
         right: px;
     }
-}
-
-/* Media Grid for Ads/Videos */
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-.media-item {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    background-color: #000;
-}
-.media-item iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
 }
