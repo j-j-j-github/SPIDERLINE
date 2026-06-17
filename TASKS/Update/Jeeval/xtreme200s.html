@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTREME 200S 4V | Diya Hero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <link rel="icon" type="image/png" href="assets/media/herofavicon.png">
+</head>
+<body>
+
+<header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/media/logo.png" alt="Diya Hero Logo" class="main-logo">
+            </a>
+
+            <nav class="navbar">
+                
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+<ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    
+                    <li class="dropdown">
+                        <a href="#" class="active">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="scooters.html">Scooters</a></li>
+                            <li><a href="bikes.html">Bikes</a></li>
+                        </ul>
+                    </li>
+            
+                    
+                    <li class="dropdown">
+                        <a href="branches.html">Branches </a>
+                    </li>
+            
+                    
+                    <li class="dropdown">
+                        <a href="#">Media <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="advertisments.html">Ads</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-detail-section">
+        <div class="container product-detail-flex">
+            <div class="product-image-container">
+                <img src="https://diyahero.com/uploads/products/200S.png" alt="XTREME 200S 4V">
+            </div>
+            <div class="product-info-container">
+                <h2>XTREME 200S 4V</h2>
+                <p class="desc">A premium scooter combining classic elegance with modern tech.</p>
+                
+                <h3 class="specs-heading">Specifications</h3>
+                <ul class="specs-list">
+                    <li><strong>Engine:</strong> <span>199.6 cc, Oil cooled, 4-stroke</span></li>
+                    <li><strong>Max Power:</strong> <span>14.1 kW @ 8000 rpm</span></li>
+                    <li><strong>Max Torque:</strong> <span>17.35 Nm @ 6500 rpm</span></li>
+                    <li><strong>Brakes:</strong> <span>Disc</span></li>
+                    <li><strong>Suspension:</strong> <span>Telescopic</span></li>
+                </ul>
+
+                <a href="bikes.html" class="btn btn-black-inline"><i class="fas fa-arrow-left"></i> Back to Bikes</a>
+                <a href="#serviceModal" class="btn btn-primary btn-inline">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="floating-social">
+        <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon tw"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon gp"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    
+    <a href="#serviceModal" class="floating-booking">
+        <div class="booking-text">SERVICE BOOKING</div>
+        <div class="booking-icon"><i class="fas fa-wrench"></i></div>
+    </a>
+
+    
+    <div class="modal-overlay" id="serviceModal">
+        
+        <a href="#" class="close-overlay"></a>
+        
+        <div class="modal-content">
+            
+            <a href="#" class="modal-close">&times;</a>
+            
+            <h2>Service Booking</h2>
+            <p class="mandatory-text">( * Mandatory Fields )</p>
+            
+            <form action="#" method="POST" class="service-form">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" class="form-control" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" class="form-control" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label>Mobile *</label>
+                    <input type="tel" class="form-control" required placeholder="Mobile number">
+                </div>
+                <div class="form-group">
+                    <label>Date *</label>
+                    <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Name *</label>
+                    <input type="text" class="form-control" required placeholder="e.g., Splendor Plus">
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Number *</label>
+                    <input type="text" class="form-control" required placeholder="e.g., KL 01 AB 1234">
+                </div>
+                <div class="form-group full-width">
+                    <label>Dealer location *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="location" value="Kollam" required> Kollam</label>
+                        <label><input type="radio" name="location" value="Trivandrum" required> Trivandrum</label>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>Description *</label>
+                    <textarea class="form-control" required placeholder="Briefly describe the service required..."></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn btn-primary submit-btn">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <footer class="bottom-footer">
+        <div class="container footer-flex">
+            <p>Copyright © 2026 @Diya Motors Pvt Ltd. All Rights Reserved.</p>
+            <p>Web Designed by Spiderline</p>
+        </div>
+    </footer>
+
+</body>
