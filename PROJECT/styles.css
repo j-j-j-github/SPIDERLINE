@@ -324,7 +324,7 @@ a {
     position: relative;
     height: calc(100vh - 116px);
     min-height: 700px;
-    background: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg') center/cover no-repeat;
+    background: url('media/homebanner.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
@@ -543,7 +543,7 @@ a {
 
 /* about.html styles */
 .page-header {
-    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://content.jdmagicbox.com/comp/thiruvananthapuram/u9/0471px471.x471.160616140213.n3u9/catalogue/diya-mobikes-enjakkal-thiruvananthapuram-scooter-dealers-4cjko4b.jpg') center/cover;
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('media/1.jpg') center/cover;
     padding: 180px 0;
     text-align: center;
     color: var(--white);
@@ -1209,11 +1209,11 @@ body {
 }
 
 .bg-image-86284b {
-    background-image: url('https://www.heromotosports.com/images/rally/races/dakar-2018/dakar-2018-banner.jpg');
+    background-image: url('media/homebanner.jpg');
 }
 
 .bg-image-e206a8 {
-    background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fbike-images%2Flarge%2Fhero%2Fxpulse-200t-4v%2Fhero-xpulse-200t-4v.jpg%3Fv%3D6&w=1920&q=80');
+    background-image: url('media/bikes.jpg');
 }
 
 .product-detail-section {
@@ -1300,11 +1300,11 @@ body {
 }
 
 .bg-image-3c4152 {
-    background-image: url('https://hgpmart.wordpress.com/wp-content/uploads/2019/07/xpulse.png');
+    background-image: url('media/XPULSE.png');
 }
 
 .bg-image-66ae2b {
-    background-image: url('https://images.hindustantimes.com/auto/img/2021/03/05/960x540/home-img_1614919901272_1614919913051.jpg');
+    background-image: url('media/optionsbg.jpg');
 }
 
 .ml-8 {
@@ -1316,7 +1316,7 @@ body {
 }
 
 .bg-gradient-2f4fb6 {
-    background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('https://mohanahero.in/wp-content/uploads/2023/05/banner-web.jpeg');
+    background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%), url('media/about.png');
 }
 
 .btn-black-inline {
