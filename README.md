@@ -21,7 +21,7 @@ This repository showcases the main web development projects completed during a S
 *   **Switchable Vehicle Grid:** Designed interactive "switchable vehicle" cards that allow users to toggle specs and visuals without page reloads for faster decision-making.
 *   **Simplified Navigation:** Streamlined the menu structure and added a prominent "Book Vehicle" Call-To-Action (CTA) to increase conversions and reduce friction.
 
-🔗 **Live URL:** [https://spiderlineglobal.in/jeeval/](https://spiderlineglobal.in/jeeval/)
+🔗 **Live URL:** https://spiderlineglobal.in/saintgits/jeeval/
 
 ---
 
