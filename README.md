@@ -28,9 +28,9 @@ This repository showcases the main web development projects completed during a S
 ### 2. Terresteel Website Design
 **Overview:** Developed an industrial manufacturing UI featuring consistent navigation, product listing templates, and responsive galleries.
 
-🔗 **Live URL:** 
+🔗 **Live URL:** [https://j-j-j-github.github.io/SPIDERLINE/TASKS/Task%203/]
 
 ### 3. Accounts Hub Website Design
 **Overview:** Built a multi-page structure focused on GST service layouts, implementing structured service pages and optimized contact flows.
 
-🔗 **Live URL:** 
+🔗 **Live URL:** []
