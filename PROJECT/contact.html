@@ -100,18 +100,19 @@
                 
                 <div class="contact-form-block">
                     <h2 class="contact-heading">Send an Enquiry</h2>
-                    <form action="#" method="POST">
+                    <form action="process_form.php" method="POST">
+                        <input type="hidden" name="form_type" value="contact">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Full Name" required>
+                            <input type="text" name="name" class="form-control" placeholder="Your Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email Address" required>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+                            <input type="tel" name="mobile" class="form-control" placeholder="Your Phone Number" required>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" required>
+                            <select name="contact_type" class="form-control" required>
                                 <option value="" disabled selected>Select Enquiry Type</option>
                                 <option value="sales">New Vehicle Sales</option>
                                 <option value="service">Service & Maintenance</option>
@@ -120,7 +121,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Write your message here..." required></textarea>
+                            <textarea name="message" class="form-control" placeholder="Write your message here..." required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane ml-8"></i></button>
                     </form>
@@ -155,30 +156,31 @@
             <h2>Service Booking</h2>
             <p class="mandatory-text">( * Mandatory Fields )</p>
             
-            <form action="#" method="POST" class="service-form">
+            <form action="process_form.php" method="POST" class="service-form">
+                <input type="hidden" name="form_type" value="service">
                 <div class="form-group">
                     <label>Name *</label>
-                    <input type="text" class="form-control" required placeholder="Enter your full name">
+                    <input type="text" name="name" class="form-control" required placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
                     <label>E-mail *</label>
-                    <input type="email" class="form-control" required placeholder="Enter your email address">
+                    <input type="email" name="email" class="form-control" required placeholder="Enter your email address">
                 </div>
                 <div class="form-group">
                     <label>Mobile *</label>
-                    <input type="tel" class="form-control" required placeholder="Mobile number">
+                    <input type="tel" name="mobile" class="form-control" required placeholder="Mobile number">
                 </div>
                 <div class="form-group">
                     <label>Date *</label>
-                    <input type="date" class="form-control" required>
+                    <input type="date" name="date" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Vehicle Name *</label>
-                    <input type="text" class="form-control" required placeholder="e.g., Splendor Plus">
+                    <input type="text" name="vehicle_name" class="form-control" required placeholder="e.g., Splendor Plus">
                 </div>
                 <div class="form-group">
                     <label>Vehicle Number *</label>
-                    <input type="text" class="form-control" required placeholder="e.g., KL 01 AB 1234">
+                    <input type="text" name="vehicle_number" class="form-control" required placeholder="e.g., KL 01 AB 1234">
                 </div>
                 <div class="form-group full-width">
                     <label>Dealer location *</label>
@@ -189,7 +191,7 @@
                 </div>
                 <div class="form-group full-width">
                     <label>Description *</label>
-                    <textarea class="form-control" required placeholder="Briefly describe the service required..."></textarea>
+                    <textarea name="description" class="form-control" required placeholder="Briefly describe the service required..."></textarea>
                 </div>
                 <div class="form-group full-width">
                     <button type="submit" class="btn btn-primary submit-btn">Confirm Booking</button>
@@ -205,5 +207,46 @@
         </div>
     </footer>
 
+
+    <!-- Vehicle Booking Modal -->
+    <div class="modal-overlay" id="vehicleModal">
+        <a href="#" class="close-overlay"></a>
+        <div class="modal-content">
+            <a href="#" class="modal-close">&times;</a>
+            <h2>Vehicle Booking</h2>
+            <p class="mandatory-text">( * Mandatory Fields )</p>
+            <form action="process_form.php" method="POST" class="service-form">
+                <input type="hidden" name="form_type" value="vehicle_booking">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" name="name" class="form-control" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" name="email" class="form-control" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label>Mobile *</label>
+                    <input type="tel" name="mobile" class="form-control" required placeholder="Mobile number">
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Name *</label>
+                    <input type="text" name="vehicle_name" class="form-control" required placeholder="e.g., Splendor Plus">
+                </div>
+                <div class="form-group full-width">
+                    <label>Preferred Dealer location *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="location" value="Kollam" required> Kollam</label>
+                        <label><input type="radio" name="location" value="Trivandrum" required> Trivandrum</label>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn btn-primary submit-btn">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="form_handler.js"></script>
 </body>
 </html>

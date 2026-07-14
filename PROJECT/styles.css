@@ -845,7 +845,8 @@ body {
     cursor: default;
 }
 
-#serviceModal:target {
+#serviceModal:target,
+#vehicleModal:target {
     opacity: 1;
     visibility: visible;
 }
@@ -866,8 +867,17 @@ body {
 }
 
 
-#serviceModal:target .modal-content {
+#serviceModal:target .modal-content,
+#vehicleModal:target .modal-content {
     transform: translateY(0) scale(1);
+}
+
+#vehicleModal .modal-content {
+    max-width: 500px;
+}
+
+#vehicleModal .service-form {
+    grid-template-columns: 1fr;
 }
 
 .modal-close {
